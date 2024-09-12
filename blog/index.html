@@ -1,0 +1,136 @@
+---
+layout: compress
+title: Blog for microsites and content
+description: Information you can actually use, from Zoomforth, to you. Learn, be inspired, and gain valuable insights to get ahead with regular contributions from our team of experts.
+noindex: true
+---
+{% include head.html %}
+
+<body>
+  <header class="academy-header">
+    <nav>
+      <a href="{{ 'blog' | relative_url }}">
+        <img src="{{ 'assets/svg/zf_blog.svg' | relative_url }}" alt="Zoomforth's logo" title="Home Zoomforth Blog" width="187" height="34"/>
+      </a>
+      <a href="{{site.baseurl}}" title="zoomforth.com">Go to Zoomforth.com</a>
+    </nav>
+    <hr/>
+    <div class="blog_main">
+      {% assign last_post = site.posts[0] %}
+        <img src="{{ site.baseurl }}assets/img/blog/{{ last_post.webpb }}" alt="{{ last_post.alt }}"/>
+      <div class="blog_card">
+        <aside>
+          <span>{{last_post.date | date_to_string: "ordinal", "US" }}</span><span>•</span><span>{{last_post.author}}</span>
+        </aside>
+        <h2>{{last_post.title | truncate: 45 }}</h2>
+        {{last_post.excerpt | truncate: 150}}
+        <ul>
+          {% for cat in last_post.categories %}
+            <li class="cat_post">
+              <a href="{{ site.baseurl }}blog/{{ cat | slugify }}" title="{{ cat }}">{{ cat }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        <a href="{{ last_post.url }}" title="{{ last_post.h1 }}" class="cta-landing cta--bold">Read more</a>
+      </div>
+    </div>
+  </header>
+
+  {% include blog-categories.html %}
+  <!-- <main class="blog_populars">
+    <hr/>
+    <h2>Most popular articles</h2>
+    <div>
+      {% for popular in site.posts %}
+        {% if popular.featured %}
+          <article>
+            <a href="{{popular.url}}">
+              <div>
+                <img src="{{site.baseurl}}assets/img/blog/{{ popular.webp }}" alt="{{ popular.alt }}" loading="lazy">
+              </div>
+            </a>
+            <div class="blog_card">
+              <aside>
+                <span>{{popular.date | date_to_string: "ordinal", "US" }}</span><span>•</span><span>{{popular.author}}</span>
+              </aside>
+              <h3>
+                <a href="{{ popular.url }}">{{ popular.title | truncate: 60 }}</a>
+              </h3>
+              <ul>
+                {% for cat in popular.categories %}
+                  <li class="cat_post">
+                    <a href="{{site.baseurl}}blog/{{cat | slugify }}" title="{{ cat }}">{{ cat }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </main> -->
+
+<main class="courses">
+  <h2 class="tutorials">Latest articles</h2>
+  <!-- post list -->
+  <ul class="blog_content">
+  {% for post in paginator.posts %}
+  {% assign cat = post.categories[0] %}
+    <li>
+      <a href="{{post.url}}" class="tutorial" title="{{post.h1}}">
+        <div class="tutorial_img">
+          <img src="{{site.baseurl}}assets/img/blog/{{ post.webp }}" alt="{{ post.alt }}" loading="lazy">
+        </div>
+        <div class="blog_card">
+          <h3>{{ post.title | truncate: 50}}</h3>
+          <div>
+            <aside>
+              <span>{{post.date | date_to_string: "ordinal", "US" }}</span><span>•</span><span>{{ post.author }}</span>
+            </aside>
+            <ul>
+              {% for cat in post.categories %}
+              <li>{{cat}}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </a>
+    </li>
+  {% endfor %}
+    <li class="suscription_blog footer-cta">
+      <h2>Stay in the know</h2>
+      <p>Subscribe to our newsletter for design inspiration, tips and best practices. Get event invitations, free resources, and details of upcoming feature releases.</p>
+      <form action="https://formspree.io/f/meqnydqk" method="POST">
+        <label>
+          <input name="email" placeholder="Enter your email" type="email">
+        </label>
+        <button type="submit">Subscribe <img alt="Arrow right" src="/assets/svg/arrow_right.svg"></button>
+      </form>
+    </li>
+  </ul>
+  <!-- pagination -->
+  {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ site.baseurl }}blog" class="first_last_paginator">First</a>
+    {% endif %}
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+        <span class="pagination_active">{{ page }}</span>
+      {% elsif page == 1 %}
+        <a href="/blog">{{ page }}</a>
+      {% else %}
+        <a href="{{ site.paginate_path | realtive_url | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+      {% endif %}
+    {% endfor %}
+    {% if paginator.next_page %}
+      {% capture last %}
+        {{ paginator.total_pages }}
+        {% endcapture%}
+        <a href="{{ site.baseurl }}blog/page{{last | slugify }}" class="first_last_paginator">Last</a>
+      {% endif %}
+    </div>
+  {% endif %}
+</main>
+{% include cta-main.html %}
+{% include footer.html %}

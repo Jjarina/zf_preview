@@ -1,0 +1,93 @@
+// Buttons
+
+.cta {
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  border-radius: $radius-buttons;
+  font-size: $font-size-18;
+  font-family: inherit;
+  line-height: $line-height--regular;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  img {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+  &.margin-bottom {
+    margin: 0 0 18px;
+  }
+}
+
+.cta-landing {
+  // display: inline-block;
+  padding: 14px 0;
+  width: 280px;
+  border: none;
+  border-radius: $radius-buttons;
+  font-size: $font-size-18;
+  font-family: inherit;
+  line-height: $line-height--regular;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: inherit;
+  img {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+  &.margin-bottom {
+    margin: 0 0 18px;
+  }
+}
+
+.cta--mt20 {
+  margin-top: 20px;
+  @media (max-width: 767px) {
+    margin-top: 0;
+  }
+}
+
+.cta--primary {
+  background: $clr-cta-primary;
+  &:hover { background: darken( $clr-cta-primary, 8% ); }
+}
+
+.cta--bold {
+  background: $clr-cta-bold;
+  color: $clr-white;
+  &:hover { background: darken( $clr-cta-bold, 8% ); }
+}
+
+.cta--ghost {
+  color: $clr-cta-bold;
+  background: none;
+  border: 1px solid $clr-cta-bold;
+  &:hover { background: lighten($clr-cta-bold,45%); }
+  &.disabled {
+    border-color: $clr-grey;
+    color: $clr-grey;
+    cursor: default;
+    &:hover {
+      background: none;
+      cursor: default;
+    }
+  }
+
+}
+
+.cta--white {
+  color: $clr-black;
+  background: $clr-white;
+  &:hover { background: darken($clr-white,5%); }
+}
+

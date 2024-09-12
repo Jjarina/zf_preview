@@ -1,0 +1,22 @@
+{% assign sorted_cats = site.categories | sort %}
+    <ul class="blog-categories">
+      {% if page.url == "/blog/" or page.url contains "/blog/page" %}
+      <li class="active">
+      {% else %}
+      <li>
+      {% endif %}
+        <a href="{{ site.baseurl }}blog" title="All posts">All posts</a>
+      </li>
+      {% for category in sorted_cats %}
+        {% capture category_name %}
+          {{ category | first }}
+        {% endcapture %}
+        {% if page.url contains /blog/{{ category }} %}
+        <li class="active">
+        {% else %}
+        <li>
+        {% endif %}
+          <a href="{{ site.baseurl }}blog/{{ category_name | slugify }}" title="{{ category_name }}">{{ category_name | normalize_whitespace | sort_natural }}</a>
+        </li>
+      {% endfor %}
+    </ul>

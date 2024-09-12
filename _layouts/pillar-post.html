@@ -1,0 +1,24 @@
+---
+layout: compress
+---
+{% include head.html %}
+
+<body>
+    <a class="skip-to-content-link" href="#main">Skip to content</a>
+    {% include masthead.html %}
+
+{{ content }}
+{% if page.hero_pillar != "hero-pillar-5" %}
+{% include cta-main.html %}
+{% else %}
+<section class="comparisons-cta">
+  <h2>Road-test the Zoomforth Content Experience Platform</h2>
+  <a class="cta cta--white" href="{{'request-demo'|relative_url}}" target="_blank">Request a demo today</a>
+</section>
+{% endif %}
+
+{% include footer.html %}
+</body>
+
+{% include salesoft-tracking.html %}
+</html>

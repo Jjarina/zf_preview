@@ -1,0 +1,128 @@
+// Media classes
+
+.md-ten-percent {
+  width: 100%;
+  max-width: 10% !important;
+  @media (max-width: 991px) {
+    max-width: 100% !important;
+  }
+}
+
+.md-twenty-percent {
+  width: 100%;
+  max-width: 20% !important;
+  @media (max-width: 991px) {
+    max-width: 100% !important;
+  }
+}
+
+.md-thirty-percent {
+  width: 100%;
+  max-width: 30% !important;
+  @media (max-width: 991px) {
+    max-width: 100% !important;
+  }
+}
+
+.md-forty-percent {
+  width: 100%;
+  max-width: 40% !important;
+  @media (max-width: 991px) {
+    max-width: 100% !important;
+  }
+}
+
+.md-fifty-percent {
+  width: 100%;
+  max-width: 50% !important;
+  @media (max-width: 991px) {
+    max-width: 100% !important;
+  }
+}
+
+.md-sixty-percent {
+  width: 100%;
+  max-width: 60% !important;
+  @media (max-width: 991px) {
+    max-width: 100% !important;
+  }
+}
+
+.md-seventy-percent {
+  width: 100%;
+  max-width: 70% !important;
+  .with-line {
+    max-width: 100% !important;
+    @media (max-width: 991px) {
+      max-width: 100% !important;
+    }
+  }
+  @media (max-width: 991px) {
+    max-width: 100% !important;
+  }
+}
+
+.md-eighty-percent {
+  width: 100%;
+  max-width: 80% !important;
+  .with-line {
+    max-width: 100% !important;
+    @media (max-width: 991px) {
+      max-width: 100% !important;
+    }
+  }
+  @media (max-width: 991px) {
+    max-width: 100% !important;
+  }
+}
+
+.md-ninety-percent {
+  width: 100%;
+  max-width: 90% !important;
+  @media (max-width: 991px) {
+    max-width: 100% !important;
+  }
+}
+
+.md-100-percent {
+  width: 100%;
+  max-width: 100% !important;
+  @media (max-width: 991px) {
+    max-width: 100% !important;
+  }
+}
+
+.content-media.md-sixty-percent {
+  img {
+    max-width: 100% !important;
+  }
+}
+
+.page-inner.content-right {
+  .content-wrap.md-forty-percent {
+    padding: 0 0 0 10px;
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+  }
+}
+
+.sm-100-percent {
+  @media (max-width: 767px) {
+    width: 100%;
+    max-width: 100% !important;
+  }
+}
+
+.mobile-flex-column {
+  @media (max-width: 767px) {
+    flex-direction: column !important;
+  }
+}
+
+.mobile-w-100 {
+  @media (max-width: 767px) {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}

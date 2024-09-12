@@ -1,0 +1,106 @@
+---
+layout: landing-layout
+---
+{% if page.url contains "platform-integrations" %}
+<section class="platform_header-v2">
+  <div>
+    <div class="platform-integrations--intro">
+      <span class="eyebrow">{{ page.eyebrow }}</span>
+      <h1>{{ page.h1 }}</h1>
+      <p>{{ page.intro }}</p>
+    </div>
+    <div class="platform-integrations--hero">
+      <img src="{{ site.baseurl}}assets/img/platform-integrations--hero1.webp" alt="Branded logos on tiles" />
+      <img src="{{ site.baseurl}}assets/img/platform-integrations--hero2.webp" alt="Branded logos on tiles" />
+    </div>
+  </div>
+  <ul>
+    {% for icon in page.icons %}
+    <li>
+      <img src="{{ site.baseurl }}assets/svg/{{ icon.img }}" alt="{{ icon.alt }}" loading="lazy" width="54" height="54"/>
+      <p>{{ icon.text }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+  
+{% else %}
+<section class="platform_header">
+  <div>
+    <h1>{{ page.h1 }}</h1>
+    <p>{{ page.intro }}</p>
+    <img src="{{ site.baseurl}}assets/img/{{ page.webp }}" alt="{{ page.alt }}" />
+    <ul>
+      {% for icon in page.icons %}
+      <li>
+        <img src="{{ site.baseurl }}assets/svg/{{ icon.img }}" alt="{{ icon.alt }}" loading="lazy" width="54" height="54"/>
+        <p>{{ icon.text }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+<!-- LIST SECTION - Most pages that discuss the Zoomforth platform use this section. This is rendered with information taken from variables located on the front-matter of those pages. -->
+{% if page.list-features %}
+<section class="platform-list-features">
+  <span class="eyebrow">{{ page.eyebrow }}</span>
+  <h2>{{ page.list-h2 }}</h2>
+  <div>
+    <ul>
+      {% for item in page.list-1 %}
+      <li>
+        <img src="{{ site.baseurl }}assets/svg/{{ item.img }}" alt="{{ item.alt }}" width="32" height="32" loading="lazy"/>
+        <p>{{ item.text }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    <ul>
+      {% for item in page.list-2 %}
+      <li>
+        <img src="{{ site.baseurl }}assets/svg/{{ item.img }}" alt="{{ item.alt }}" width="32" height="32" loading="lazy"/>
+        <p>{{ item.text }}</p>
+      </li>
+      {% endfor %}
+      {% if page.url contains 'security-features' %}
+      <li><span>*Set-up fee applies for SAML / SSO</span></li>
+      {% endif %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+<!-- End List section -->
+<main class="platform_content">
+  {{content}}
+</main>
+<!-- Testimonial section - Most of the pages that discuss the Zoomforth platform use the second option in this section. This is rendered with information taken from variables located on the main front of those pages. -->
+{% if page.comment %}
+<section class="platform_testimonial">
+  <hr>
+  <blockquote>{{ page.comment }}<span>{{ page.source }}</span></blockquote>
+{% else %}
+<section class="platform_testimonials">
+  <h2>What our customers say about our<br>DX microsite platform</h2>
+  <p>Don’t take our word for it. See why our customers think the Zoomforth digital experience microsite platform is the best in its class.</p>
+  <div>
+    <a href="https://www.g2.com/products/zoomforth/reviews/zoomforth-review-4864485" target="_blank" title="Testimonial in G2" rel="nofollow noopener noreferrer">“Great website builder for people who can’t build websites”</a>
+    <a href="https://www.g2.com/products/zoomforth/reviews/zoomforth-review-4853064" target="_blank" title="Testimonial in G2" rel="nofollow noopener noreferrer">“Zoomforth rocks”</a>
+    <a href="https://www.g2.com/products/zoomforth/reviews/zoomforth-review-4849817" target="_blank" title="Testimonial in G2" rel="nofollow noopener noreferrer">“Helps us win new work regularly”</a>
+    <a href="https://www.g2.com/products/zoomforth/reviews/zoomforth-review-4857549" target="_blank" title="Testimonial in G2" rel="nofollow noopener noreferrer">“Easy microsite development”</a>
+    <a href="https://www.g2.com/products/zoomforth/reviews/zoomforth-review-4847258" target="_blank" title="Testimonial in G2" rel="nofollow noopener noreferrer">“Best software to advertise contents online”</a>
+    <a href="https://www.g2.com/products/zoomforth/reviews/zoomforth-review-4786711" target="_blank" title="Testimonial in G2" rel="nofollow noopener noreferrer">“Great team to work with”</a>
+    <a href="https://www.g2.com/products/zoomforth/reviews/zoomforth-review-4854319" target="_blank" title="Testimonial in G2" rel="nofollow noopener noreferrer">“Game changing platform”</a>
+    <a href="https://www.g2.com/products/zoomforth/reviews/zoomforth-review-4849267" target="_blank" title="Testimonial in G2" rel="nofollow noopener noreferrer">“Zoomforth is awesome”</a>
+    <a href="https://www.g2.com/products/zoomforth/reviews/zoomforth-review-4847449" target="_blank" title="Testimonial in G2" rel="nofollow noopener noreferrer">“Best Customized branded and target content creator”</a>
+  </div>
+  {% endif %}
+  <div class="social-proof--subline">
+    <a href="https://www.g2.com/products/zoomforth/reviews" target="_blank" title="Read our reviews on G2"><img src="/assets/svg/reviews_g2.svg" alt="Stars for reviews, showing 4.5 stars out of 5"></a>
+    <a href="https://www.g2.com/products/zoomforth/reviews" target="_blank" title="Read our reviews on G2">Read more reviews on G2</a>
+  </div>
+<!-- End testimonial section -->
+</section>
+<section class="platform-cta">
+  {% include cta-secondary.html %}
+</section>
+<script defer src="https://fast.wistia.com/assets/external/E-v1.js" async></script>

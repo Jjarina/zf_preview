@@ -1,0 +1,16 @@
+.pr-md-0 {
+  @media (max-width: 991px) {
+    padding-right: 0;
+  }
+}
+
+.mb-mobile-40 {
+  @media (max-width: 767px) {
+    margin-bottom: 40px;
+  }
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+

@@ -1,0 +1,21 @@
+---
+layout: compress
+---
+{% include head.html %}
+
+<body>
+    <a class="skip-to-content-link" href="#main">Skip to content</a>
+    {% include masthead.html %}
+
+<section class="intro-row" id="main">
+    <div class="page-inner flex-50 flex-contents flex-contents md-flex-direction">
+        <h1>{{ page.page_heading }}</h1>
+        <p>{{ page.page_intro }}</p>
+    </div>
+</section>
+{{ content }}
+{% include cta-main.html %}
+{% include footer.html %}
+</body>
+{% include salesoft-tracking.html %}
+</html>

@@ -1,0 +1,116 @@
+// // CTA before footer
+.footer-cta {
+  width: 100%;
+  padding: 90px 2%;
+  box-sizing: border-box;
+  background: url('/assets/img/bg-gradient--footer.png') center center no-repeat $clr-purple;
+  background-size: cover;
+  color: $clr-white;
+  text-align: center;
+
+  @media (max-width: 767px) {
+    padding: 90px 30px;
+  }
+
+  h2 {
+    margin: 0 auto 30px;
+    width: 800px;
+    max-width: 100%;
+    font-size: $font-size-48;
+
+    @media (max-width: 767px) {
+      font-size: $font-size-28;
+    }
+  }
+}
+
+// CTA before lessons footer in Academy section
+.lessons-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h2{
+    font-size: $font-size-36;
+    margin-bottom: 16px;
+  }
+  p{
+    font-size: $font-size-18;
+    max-width: 592px;
+    margin-bottom: 40px;
+  }
+}
+
+// Main footer
+footer {
+  width: 100%;
+  padding: 64px 0;
+  display: flex;
+  gap: 56px;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(91.5deg, rgba(255, 255, 255, 0.35) 25.21%, rgba(255, 255, 255, 0) 90.55%), #E7F5FA;
+
+  @media (max-width: 1200px) {
+    padding: 64px 15px;
+  }
+
+  a {
+    color: $clr-black;
+  }
+
+  section:first-child {
+    width: 100%;
+    max-width: 1128px;
+    display: grid;
+    gap: 6.07rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(176px, 150px), 1fr));
+    grid-template-rows: auto;
+    
+    @media (max-width: 1200px) {
+      gap: 1rem;
+    }
+
+    a{
+      @media (max-width: 992px) {
+        grid-column: 1/-1;
+      }
+    }
+
+    a img{
+      max-width: 100%;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: $font-size-16;
+
+      h4 {
+        margin: 0 0 8px;
+        color: $clr-mid-grey;
+        font-weight: 400;
+      }
+    }
+  }
+
+  section:last-child {
+    width: 100%;
+    max-width: 1128px;
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $clr-grey-light;
+    ;
+
+    div {
+      font-size: $font-size-14;
+
+      &:last-child a {
+        margin-left: 24px;
+      }
+    }
+
+  }
+}

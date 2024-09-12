@@ -1,0 +1,101 @@
+---
+layout: compress
+---
+{% include head.html %}
+
+<body>
+    <a class="skip-to-content-link" href="#main">Skip to content</a>
+    {% include masthead.html %}
+
+<section class="intro-row" id="main">
+    <div class="page-inner flex-50 flex-contents flex-contents md-flex-direction">
+        <h1>{{ page.page_heading }}</h1>
+        <p>{{ page.page_intro }}</p>
+    </div>
+</section>
+
+{{ content }}
+
+<div class="page-wrapper">
+
+<section class="page-inner">
+    <span class="eyebrow">Insights</span>
+    <div class="header-link">
+        <h2>Latest from the blog</h2>
+        <a class="arrow" href="{{site.baseurl}}blog">Visit the Blog <img src="/assets/svg/arrow_right_blue.svg" alt=""></a>
+    </div>
+
+    <ul class="blog_content">
+        {% assign first_post = site.posts[0] %}
+          <li>
+            <a href="{{ first_post.url }}" class="tutorial" title="{{ first_post.h1 }}">
+              <div class="tutorial_img">
+                <img src="{{ site.baseurl }}assets/img/blog/{{ first_post.webp }}" alt="{{ first_post.alt }}" loading="lazy">
+              </div>
+              <div class="blog_card">
+                <h3>{{ first_post.title | truncate: 52}}</h3>
+                <span>Time:
+                  {{ first_post.time_read }}
+                  • Author:
+                  {{ first_post.author }}</span>
+                <hr>
+                <ul>
+                  {% for cat in first_post.categories %}
+                    <li>{{ cat }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </a>
+          </li>
+          {% assign second_post = site.posts[1] %}
+          <li>
+            <a href="{{ second_post.url }}" class="tutorial" title="{{ second_post.h1 }}">
+              <div class="tutorial_img">
+                <img src="{{ site.baseurl }}assets/img/blog/{{ second_post.webp }}" alt="{{ second_post.alt }}" loading="lazy">
+              </div>
+              <div class="blog_card">
+                <h3>{{ second_post.title | truncate: 52}}</h3>
+                <span>Time:
+                  {{ second_post.time_read }}
+                  • Author:
+                  {{ second_post.author }}</span>
+                <hr>
+                <ul>
+                  {% for cat in second_post.categories %}
+                    <li>{{ cat }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </a>
+          </li>
+          {% assign third_post = site.posts[2] %}
+          <li>
+            <a href="{{ third_post.url }}" class="tutorial" title="{{ third_post.h1 }}">
+              <div class="tutorial_img">
+                <img src="{{ site.baseurl }}assets/img/blog/{{ third_post.webp }}" alt="{{ third_post.alt }}" loading="lazy">
+              </div>
+              <div class="blog_card">
+                <h3>{{ third_post.title | truncate: 52}}</h3>
+                <span>Time:
+                  {{ third_post.time_read }}
+                  • Author:
+                  {{ third_post.author }}</span>
+                <hr>
+                <ul>
+                  {% for cat in third_post.categories %}
+                    <li>{{ cat }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </a>
+          </li>
+      </ul>
+
+</section>
+
+</div><!--/page-wrapper-->
+{% include cta-main.html %}
+{% include footer.html %}
+</body>
+{% include salesoft-tracking.html %}
+</html>

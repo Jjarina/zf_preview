@@ -1,0 +1,139 @@
+---
+layout: compress
+meta_title: Blog for microsites and content
+meta_description: Information you can actually use, from Zoomforth, to you. Learn, be inspired, and gain valuable insights to get ahead with regular contributions from our team of experts.
+---
+{% include head.html %}
+
+<body>
+  <header class="academy-header post-header">
+    <nav>
+      <a href="{{ 'blog' | relative_url }}">
+        <img src="{{ 'assets/svg/zf_blog.svg' | relative_url}}" alt="Zoomforth's logo" title="Home Zoomforth Blog" width="187" height="34"/>
+      </a>
+      <a href="{{site.baseurl}}" title="zoomforth.com">Go to Zoomforth.com</a>
+    </nav>
+    <hr/>
+  </header>
+  <section class="article_hero">
+    <div>
+      {% if page.author %}
+      <aside>
+        <span>{{ page.date | date_to_long_string }}</span><span>•</span><span>{{ page.author }}</span><span>•</span><span>{{ page.time_read }} read</span>
+      </aside>
+      {% endif %}
+      <h1>{{page.h1}}</h1>
+      <div class="article_hero_tags">
+        {% for tag in page.categories %}
+        <a href="{{ site.baseurl }}blog/{{ tag | slugify }}">{{tag}}</a>
+        {% endfor %}
+      </div>
+      <img
+        src="{{ site.baseurl }}assets/img/blog/{{ page.webps }}"
+        srcset="{{ site.baseurl }}assets/img/blog/{{ page.webps }}  367w,
+      {{ site.baseurl }}assets/img/blog/{{ page.webpm }}  564w,
+      {{ site.baseurl }}assets/img/blog/{{ page.webp }}  1128w"
+        alt="{{ page.alt }}"
+      />
+    </div>
+  </section>
+  <main class="posts">
+    <article>
+      {{ content }}
+      {% if page.author %}
+      <div class="article_footer">
+        <ul>
+          {% for cat in page.categories %}
+          <li class="cat_post">
+            <a href="{{site.baseurl}}blog/{{cat | slugify}}" title="{{cat}}">{{cat}}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        <aside>
+          <span>{{ page.date | date_to_string: "ordinal", "US" }}</span> • <span>{{ page.author }}</span>
+        </aside>
+      </div>
+      {% endif %}
+    </article>
+    {% if page.author %}
+    {% include share.html %}
+    {% endif %}
+  </main>
+  {% if page.author %}
+  <section class="post_footer">
+      <div class="suscription_blog">
+        <h2>Stay in the know</h2>
+        <p>
+          Subscribe to our newsletter for design inspiration, tips and best
+          practices. Get event invitations, free resources, and details of
+          upcoming feature releases.
+        </p>
+        <form action="https://formspree.io/f/meqnydqk" method="POST">
+          <label>
+            <input name="email" placeholder="Enter your email" type="email" />
+          </label>
+          <button type="submit">
+            Subscribe
+            <img alt="Arrow right" src="/assets/svg/arrow_right.svg" />
+          </button>
+        </form>
+      </div>
+  </section>
+  <section class="post_related">
+    <div>
+    <h3 class="tutorials">You might also like</h3>
+    <ul class="blog_content">
+        {% assign maxRelated = 3 %}
+        {% assign minCommonTags =  1 %}
+        {% assign maxRelatedCounter = 0 %}
+        
+        {% for post in site.posts %}
+        
+            {% assign sameTagCount = 0 %}
+            {% assign commonTags = '' %}
+        
+            {% for category in post.categories %}
+              {% if post.url != page.url %}
+                {% if page.categories contains category %}
+                  {% assign sameTagCount = sameTagCount | plus: 1 %}
+                  {% capture tagmarkup %} <span class="label label-default">{{ category }}</span> {% endcapture %}
+                  {% assign commonTags = commonTags | append: tagmarkup %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+            {% if sameTagCount >= minCommonTags %}
+              <li>
+                <a href="{{ post.url }}" class="tutorial" title="{{ post.h1 }}">
+                  <div class="tutorial_img">
+                    <img
+                      src="{{ site.baseurl }}assets/img/blog/{{ post.webp }}"
+                      alt="{{ post.alt }}"
+                      loading="lazy"/>
+                  </div>
+                  <div class="blog_card">
+                    <h3>{{ post.title | truncate: 67 }}</h3>
+                    <span>{{post.date | date_to_string: "ordinal", "US" }} • Author: {{ post.author }}</span>
+                    <hr />
+                    <ul>
+                      {% for cat in post.categories %}
+                      <li>{{cat}}</li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </a>
+              </li>
+              {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+              {% if maxRelatedCounter >= maxRelated %}
+                {% break %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+  </section>
+  {% endif %}
+  {% include cta-main.html %}
+  {% include footer.html %}
+  {% include salesoft-tracking.html %}
+</body>
+</html>

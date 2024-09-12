@@ -1,0 +1,172 @@
+.faq-page {
+	padding: 3em 0;
+	.content-wrapper {
+		p {
+			font-size: 1.8rem;
+			line-height: 27px;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.sidebar-nav {
+	width: 230px;
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: .5em;
+	}
+
+	@media (max-width: 1199px) {
+		border-left: none;
+		margin-bottom: 30px;
+		text-align: center;
+		padding: 0;
+		width: 100%;
+	}
+
+	@media (min-width: 1300px) {
+		position: sticky;
+		left: calc((100% - (230px + 840px))/2);
+		top: 0;
+	}
+}
+
+.faq-list {
+	break-before: column;
+	margin-bottom: 40px;
+
+	&:first-of-type {
+		padding-top: 40px;
+	}
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+
+	h3 {
+		margin-bottom: 15px;
+	}
+}
+
+.faq-item {
+	margin-bottom: 15px;
+	page-break-inside: avoid;           /* Theoretically FF 20+ */
+  break-inside: avoid-column;         /* Chrome, Safari, IE 11 */
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+
+	.faq-question {
+		background-color: #ECF0F5;
+		padding: 15px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: #000;
+		border-radius: 8px;
+
+		&:hover {
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+		img, svg {
+			transition: all ease-in 200ms;
+		}
+
+		&.active {
+			border-radius: 8px 8px 0 0;
+
+			img, svg {
+				transform: rotate(45deg);
+			}
+		}
+
+		h3{margin: 0;}
+		
+		h4 {
+			font-size: 2rem;
+			font-weight: 400;
+			line-height: 30px;
+			margin: 0;
+			margin-right: 20px;
+		}
+	}
+
+	.faq-answer {
+		display: none;
+		background-color: #ECF0F5;
+		padding: 0 15px 15px;
+		border-bottom-left-radius: 8px;
+		border-bottom-right-radius: 8px;
+
+		p {
+			font-size: 1.8rem;
+			line-height: 27px;
+			color: #3D3E43;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+
+		li {
+			font-size: 1.8rem;
+			line-height: 27px;
+			color: #3D3E43;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+
+		ul {
+			padding-left: 45px;
+			margin-top: 0;
+		}
+	}
+}
+
+.policies{
+	padding: 3em 0;
+}
+
+.faq-home{
+	width: 100%;
+	max-width: 1128px;
+	padding: 9rem 15px;
+	margin-inline: auto;
+	@media (min-width: 1128px) {
+		padding: 9rem 0;
+	}
+	
+	h2{
+		margin: 0 0 2.4rem;
+	}
+
+	& > div{
+		display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(396px, 1fr));
+    gap: 1.2rem;
+
+		article{
+			width: 100%;
+
+			.faq-question,
+			.faq-answer{
+				background-color: white;
+			}
+
+			h3{
+				font-weight: 400;
+			}
+
+		}
+	}
+}

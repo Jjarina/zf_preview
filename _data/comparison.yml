@@ -1,0 +1,59 @@
+benefits:
+  - img: assets/svg/icon-easy.svg
+    title: Stand out and get noticed with online proposals
+    text: Engage your clients and win more bids with compelling, 100% personalized digital content experiences.
+  - img: assets/svg/icon-cost-savings.svg
+    title: Save on design costs
+    text: Designers and developers are expensive resources. That’s why you’ll save thousands of dollars switching.
+  - img: assets/svg/icon-time-saving.svg
+    title: Get to market faster
+    text: No more bottlenecks. Anyone in your team can create branded, responsive websites in just hours. No steep learning curve.
+  - img: assets/svg/icon-brand.svg
+    title: Create frictionless experiences
+    text: Swap the email chains, PDFs and endless back-and-forths for one source of truth — immersive, easily-navigable microsites.
+
+clients:
+  - img: assets/svg/icon-trial.svg
+    title: Fully-supported free trial
+    text: Try it before you buy it for 14 days with guided support throughout.
+  - img: assets/svg/icon-academy.svg
+    title: eLearning academy access
+    text: Extensive library of video demos and an in-depth help center to help you master Zoomforth.
+  - img: assets/svg/icon-support.svg
+    title: 24/5 customer success team
+    text: Urgent issue? Quick question? Our full support team is at your disposal via live chat, zoom, or email.
+  - img: assets/svg/icon-measure.svg
+    title: Skills workshops and training
+    text: Level up your microsite design skills with quarterly workshops and weekly training sessions.
+
+competitors:
+  - png: comparison-ceros-hero.png
+    webp: comparison-ceros-hero.webp
+    alt: Mockup of site comparison between Zoomfort and Ceros
+    title: Zoomforth vs Ceros
+    text: Create stunning, secure Zoomforth sites without the learning curve or the price tag of Ceros. <br><br>Offering a no-code environment, Zoomforth doesn’t require users to have a development background. Plus, with style guides, a font library, and templates included, creating your custom microsites has never been easier.
+    link: comparison-ceros
+  - png: comparison-hero-foleon.png
+    webp: comparison-hero-foleon.webp
+    alt: Mockup of site comparison between Zoomfort and Foleon
+    title: Zoomforth vs Foleon
+    text: Create professional, secure Zoomforth microsites for all kinds of use-case, with all-inclusive pricing. <br><br>Unlike Foleon, Zoomforth users have access to comprehensive customer service and onboarding support at no extra cost. Beginner and experienced designers alike can benefit from the intuitive, feature-rich platform to craft custom microsites with ease.
+    link: comparison-foleon
+  - png: comparison-hero-tiled.png
+    webp: comparison-hero-tiled.webp
+    alt: Mockup of site comparison between Zoomfort and Tiled
+    title: Zoomforth vs Tiled
+    text: Create media-rich, secure & accessible Zoomforth sites, with built-in compliance features and detailed analytics.<br><br>Zoomforth’s platform puts accessibility first, complying with the Web Content Accessibility Guidelines (WCAG2.1) to a AA standard. Experience the Zoomforth difference firsthand with a no-strings 14-day free trial.
+    link: comparison-tiled
+  - png: comparison-hero-turtl.png
+    webp: comparison-hero-turtl.webp
+    alt: Mockup of site comparison between Zoomfort and Turtl
+    title: Zoomforth vs Turtl
+    text: Create professional, media-rich Zoomforth content experiences in a familiar website format.<br><br>Zoomforth’s intuitive drag-and-drop editor makes building powerful enterprise-level digital experiences easy. Built with the modern business in mind, Zoomforth encourages you to bring your story to life with fully-branded, multimedia content to engage and inspire.
+    link: comparison-turtl
+  - png: comparison-hero-qwilr.png
+    webp: comparison-hero-qwilr.webp
+    alt: Mockup of site comparison between Zoomfort and Qwilr
+    title: Zoomforth vs Qwilr
+    text: Create highly secure, personalized Zoomforth microsites with built-in brand controls. If you’re looking to create more than just sales proposals, Zoomforth’s custom microsite builder is suited to an array of enterprise-level needs, from product launches and marketing campaigns to recruitment portals and internal communications. Theme and style guides allow for complete branding alignment, meaning your microsites can make just as much of an impact as your main site.
+    link: comparison-qwilr

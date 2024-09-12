@@ -1,0 +1,102 @@
+.case-studies {
+  .page-inner {
+    h2 {
+      font-size: 3.6rem;
+    }
+
+    .content-media {
+      img {
+        max-width: 100%;
+        background: #3c173e;
+      }
+    }
+  }
+
+  .content-media {
+    padding-right: 48px;
+
+    @media (max-width: 767px) {
+      padding-right: 0 !important;
+    }
+
+    @media (max-width: 991px) {
+      padding-right: 30px;
+    }
+  }
+}
+
+.page-inner.content-right {
+  .content-wrap.md-forty-percent {
+    padding: 0 0 0 10px;
+
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+  }
+}
+
+.md-forty-percent {
+  width: 100%;
+  max-width: 40%;
+
+  @media (max-width: 991px) {
+    max-width: 100%;
+  }
+}
+
+.md-sixty-percent {
+  width: 100%;
+  max-width: 60%;
+
+  @media (max-width: 991px) {
+    max-width: 100%;
+  }
+}
+
+.content-media.md-sixty-percent {
+  img {
+    max-width: 100%;
+  }
+}
+
+.use_case_videos {
+  position: relative;
+  padding: 90px 15px 0;
+
+  @media (min-width: 1200px) {
+    padding: 90px 0 0;
+  }
+
+  img:not(.play_button) {
+    background: url('/assets/img/bg-gradient--row.png');
+    display: block;
+    border-radius: 12px;
+    margin: 0 auto;
+    filter: brightness(100%);
+    -webkit-filter: brightness(100%);
+    transition: all 0.3s ease;
+    max-width: 100%;
+
+    &:hover {
+      filter: brightness(60%);
+      -webkit-filter: brightness(60%);
+
+    }
+    
+    &:hover ~ .play_button {
+      box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.15);
+      background-color: rgba(255, 255, 255, 0.15);
+      transform: scale(1.05);
+    }
+  }
+
+  .play_button {
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 32px);
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    transition: all 0.2s linear;
+  }
+}

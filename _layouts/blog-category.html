@@ -1,0 +1,77 @@
+---
+layout: compress
+---
+
+{% include head.html %}
+
+<body>
+  <header class="academy-header post-header">
+    <nav>
+      <a href="{{ 'blog' | relative_url }}">
+        <img src="{{ 'assets/svg/zf_blog.svg' | relative_url}}" alt="Zoomforth's logo" title="Home Zoomforth Blog" width="187" height="34"/>
+      </a>
+      <a href="{{site.baseurl}}" title="zoomforth.com">Go to Zoomforth.com</a>
+    </nav>
+    <hr />
+  </header>
+  <main class="courses">
+    <h1>{{page.h1}}</h1>
+    <ul class="categories-page">
+      {% assign cat = page.topic %}
+      {% for post in site.categories[cat] %}
+        {% if forloop.first %}
+        <li class="category-hero">
+          <img src="{{ site.baseurl }}assets/img/blog/{{ post.webpb }}" alt="{{ post.alt }}"/>
+          <div class="blog_card">
+            <aside>
+              <span>{{post.date | date_to_string: "ordinal", "US" }}</span><span>•</span><span>{{post.author}}</span>
+            </aside>
+            <h2>{{post.title | truncate: 45 }}</h2>
+            {{ post.excerpt | truncate: 150 | markdownify }}
+            <ul>
+              {% for cat in post.categories %}
+                <li class="cat_post">
+                  <a href="{{ site.baseurl }}blog/{{ cat | slugify }}" title="{{ cat }}">{{ cat }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+            <hr>
+            <a href="{{ post.url }}" title="{{ post.h1 }}" class="cta-landing cta--bold">Read more</a>
+          </div>
+        </li>
+        {% endif %}
+      {% endfor %}
+      {% for post in site.categories[cat] offset: 1 %}
+      <li>
+        <a href="{{ post.url }}" class="tutorial" title="{{ post.h1 }}">
+          <div class="tutorial_img">
+            <img
+              src="{{ site.baseurl }}assets/img/blog/{{ post.webp }}"
+              alt="{{ post.alt }}"
+              loading="lazy"
+            />
+          </div>
+          <div class="blog_card">
+            <h3>{{ post.title | truncate: 46 }}</h3>
+            <span>{{ post.date | date_to_string: "ordinal", "US" }} • Author: {{ post.author }}</span>
+            <hr/>
+            <ul>
+              {% for cat in post.categories %}
+              <li>{{cat}}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </main>
+  <section class="categories-text">
+    {{ content }}
+  </section>
+  {% include cta-main.html %}
+  {% include footer.html %}
+</body>
+  {% include salesoft-tracking.html %}
+  </html>
+

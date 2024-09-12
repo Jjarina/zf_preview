@@ -1,0 +1,101 @@
+- title: Adobe Analytics
+  p: Export data to your Adobe Analytics dashboard with the use of javascript snippets.
+  img: platform-integrations--adobe-logo.webp
+  alt: Adobe analytics logo
+
+- title: Azure AD
+  p: Secure your Zoomforth account and microsites with your Azure Active Directory via a SAML integration for Single Sign On 
+  span: '*Set-up fee applies'
+  img: platform-integrations--azure-logo.webp
+  alt: Azure logo
+  
+- title: Custom Domain 
+  p: Whitelabel your sites with a custom domain (this will usually be a domain or subdomain that you own that is not in use elsewhere) 
+  span: '*Set-up fee applies'
+  img: platform-integrations--domain-logo.webp
+  alt: Domain logo
+    
+- title: HTML Packages
+  p: Create HTML packages, like gamification features, outside of Zoomforth and easily embed them into your sites
+  img: platform-integrations--html-logo.webp
+  alt: HTML5 logo
+
+- title: Hubspot
+  p: Integrate your Hubspot CRM to receive visitor data directly to your contact records
+  img: platform-integrations--hubspot-logo.webp
+  alt: Hubspot logo
+
+- title: Google
+  p: Embed google sheets, maps, calendars and more
+  img: platform-integrations--google-logo.webp
+  alt: Google logo
+
+- title: Google Analytics
+  p: Export data to your Google Analytics dashboard with the use of javascript snippets
+  img: platform-integrations--google-analytics-logo.webp
+  alt: Google Analytics logo
+
+- title: LinkedIn
+  p: Embed your LinkedIn feed to keep your audience up to date on thought leadership
+  img: platform-integrations--linkedin-logo.webp
+  alt: LinkedIn logo
+
+- title: Microsoft Word
+  p: Upload word docs directly from the Site Editor 
+  img: platform-integrations--microsoft-word-logo.webp
+  alt: Microsoft Word logo
+
+- title: Microsoft Excel
+  p: Upload excel spreadsheets directly from the Site Editor
+  img: platform-integrations--microsoft-excel-logo.webp
+  alt: Microsoft Excel logo
+
+- title: Microsoft Teams
+  p: Integrate with your Teams system to get real-time notifications of site visits or form inputs
+  img: platform-integrations--microsoft-teams-logo.webp
+  alt: Microsoft Teams logo
+
+- title: Salesforce
+  p: Integrate your Salesforce CRM to receive visitor data directly to your lead records
+  img: platform-integrations--salesforce-logo.webp
+  alt: Salesforce logo
+
+- title: Slack
+  p: Integrate with your Slack system to get real-time notifications of site publication, visits and form inputs
+  img: platform-integrations--slack-logo.webp
+  alt: Slack logo
+
+- title: Tableau
+  p: Embed Tableau charts and graphs for an interactive way to display your data
+  img: platform-integrations--tableau-logo.webp
+  alt: Tableau logo
+
+- title: Twitter
+  p: Embed your Twitter feed to keep your audience up to date on thought leadership
+  img: platform-integrations--twitter-logo.webp
+  alt: Twitter logo
+
+- title: Typeform
+  p: Embed your Typeform forms into Zoomforth to collect valuable visitor information
+  img: platform-integrations--typeform-logo.webp
+  alt: Typeform logo
+
+# - title: Unsplash
+#   p: Use our Unsplash integration to access royalty-free images for your microsites
+#   img: platform-integrations--unsplash-logo.webp
+#   alt: Unsplash logo
+
+- title: Wistia
+  p: Embed your Wistia videos in your sites, directly from the Site Editor
+  img: platform-integrations--wistia-logo.webp
+  alt: Wistia logo
+
+- title: YouTube
+  p: Connect your YouTube videos directly in the Site Editor, and create playlists to promote audience engagement
+  img: platform-integrations--youtube-logo.webp
+  alt: YouTube logo
+
+- title: Zapier
+  p: Use our Zapier integration to connect to 5,000+ other systems
+  img: platform-integrations--zapier-logo.webp
+  alt: Zapier logo

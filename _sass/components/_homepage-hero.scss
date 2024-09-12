@@ -1,0 +1,249 @@
+// Homepage Hero
+
+.hero-wrapper {
+  width: 100%;
+  padding: 70px 0 0;
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #E7F1F3;
+  &.white {
+    background: $clr-white;
+  }
+  &.padding-bottom {
+    padding-bottom: 70px;
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  width: 940px;
+  max-width: 90%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  h1 {
+    width: 90%;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+  p {
+    width: 60%;
+    margin: 0 0 30px;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+  .cta-margin {
+    margin-bottom: 45px;
+  }
+  .hero-media {
+    margin: 30px 0 0;
+    font-size: 0;
+    img {
+      max-width: 940px;
+      width: 100%;
+    }
+    video {
+      box-shadow: 0px 20px 60px -20px rgba(0, 0, 0, 0.55);
+      border-radius: $radius-media $radius-media 0 0;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.intro-row,
+.hero-content {
+  p {
+    color: $clr-grey;
+  }
+}
+
+.intro-row {
+  br {
+    @media (max-width: 767px) {
+      display: none !important;
+    }
+    @media (max-width: 991px) {
+      display: none !important;
+    }
+  }
+}
+
+.intro-row {
+  padding: 42px 0 60px;
+  background: $clr-white;
+  h1, p {
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+  h1 {
+    &:last-of-type {
+      @media (max-width: 991px) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.split-bg-wrapper {
+  padding: 30px 0;
+  background:url('/assets/svg/bg-split-white-grey.svg') repeat-x center;
+  @media (max-width: 767px) {
+    padding: 0;
+  }
+}
+
+.split-bg-wrapper-flipped {
+  margin: 0;
+  padding: 30px 0;
+  background:url('/assets/svg/bg-split-grey-white.svg') repeat-x center;
+  &.dark {
+    background:url('/assets/svg/bg-split-dark-grey-white.svg') repeat-x center;
+  }
+}
+
+.feature-highlight {
+  width: 1128px;
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 40px 90px;
+  box-sizing: border-box;
+  background: $clr-white;
+  box-shadow: 0px 15px 20px -10px rgba(0, 0, 0, 0.1);
+  border-radius: $radius-panels;
+  display: flex;
+  text-align: left;
+  @media (max-width: 767px) {
+    padding: 30px 15px;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  img {
+    display: block;
+    margin: 0 30px 0 0;
+    width: 100%;
+    max-width: 72px;
+    height: 72px;
+    @media (max-width: 767px) {
+      margin: 0;
+      margin-bottom: 16px;
+    }
+  }
+  h3 {
+    margin: 0 0 6px;
+    font-size: $font-size-24;
+  }
+  p {
+    margin: 0;
+    font-size: $font-size-16;
+  }
+}
+
+.quote {
+  background: $clr-panel;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 60px;
+  border-radius: $radius-panels;
+  display: flex;
+  width: 90%;
+  align-items: center;
+  &.wide-quote {
+    width: 100%;
+  }
+  @media (max-width: 991px) {
+    padding: 40px 20px;
+  }
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+  &.no-background {
+    padding: 30px 0 0;
+    background: none;
+    @media (max-width: 767px) {
+      padding: 0 0 18px;
+    }
+  }
+  .quote-image {
+    display: block;
+    max-width: 100%;
+    min-width: 200px;
+    margin: 0;
+    border-radius: 50%;
+    @media (max-width: 767px) {
+      max-width: 140px;
+    }
+  }
+  blockquote {
+    margin: 0;
+    padding: 0 0 0 30px;
+    @media (max-width: 767px) {
+      padding: 0;
+      padding-top: 20px;
+      text-align: center;
+    }
+  }
+  p {
+    font-size: $font-size-36;
+    @media (max-width: 767px) {
+      font-size: $font-size-24;
+    }
+  }
+}
+
+.quote-flex {
+  justify-content: normal;
+  gap: 60px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  @media (max-width: 991px) {
+    gap: 50px 30px;
+  }
+}
+
+.page-quote {
+  margin: 0;
+  width: 100%;
+  max-width: 46%;
+  @media (max-width: 767px) {
+    max-width: 100%;
+  }
+  p {
+    font-size: $font-size-24;
+  }
+}
+
+.quote,
+.page-quote {
+  p {
+    line-height: $line-height--headings;
+    margin: 0 0 12px;
+    letter-spacing: $tracking-headings;
+    &::before {
+      display: block;
+      margin: 0 0 18px;
+      width: 20px;
+      height: 18px;
+      background: url('/assets/svg/icon-quote.svg') no-repeat center center;
+      background-size: cover;
+      content: "";
+      @media (max-width: 767px) {
+        margin: 0 auto;
+        margin-bottom: 12px;
+      }
+    }
+  }
+  cite {
+    margin: 0;
+    font-style: normal;
+    color: $clr-grey;
+    font-size: $font-size-16;
+  }
+}

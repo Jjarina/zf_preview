@@ -1,0 +1,8 @@
+<nav class="sidebar-nav">
+    <ul>
+        <li>Policies</li>
+        <li><a {% if page.url == "/privacy" %}class="active"{% endif %} href="/privacy">Privacy policy</a></li>
+        <li><a {% if page.url == "/security" %}class="active"{% endif %}  href="/security">Security</a></li>
+        <li><a {% if page.url == "/terms" %}class="active"{% endif %}  href="/terms">Terms of use</a></li>
+    </ul>
+</nav>

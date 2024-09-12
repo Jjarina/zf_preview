@@ -1,0 +1,20 @@
+<!-- this include take the info from _data/faq-home.yml -->
+<section id="general" class="faq-list faq-home page-inner">
+  <h2>Frequently asked questions</h2>
+  <p>Quick answers to your questions. Can’t find what you’re looking for? Visit our <a href="https://support.zoomforth.com/en/">Help Center</a>.</p>
+  <div>
+  {% for question in site.data.faq-home %}
+    <article class="faq-item">
+      <a class="faq-question {% if question.active %}active{% endif %}">
+        <h3>{{question.h3}}</h3>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" fill="#134FEA"/>
+          </svg>
+      </a>
+      <div class="faq-answer" {% if question.style %}style="display: block;"{% endif %}>
+        <p>{{question.p}}</p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+ </section>

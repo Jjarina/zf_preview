@@ -1,0 +1,70 @@
+<!-- {% if page.news_strip %}
+<div class="news-strip">
+    <p>{{ page.news_strip }}</p>
+</div>
+{% endif %} -->
+
+{% unless page.url == "/linkedin-landing" or page.layout == "landing-layout" %}
+<header class="primary-header js-primary-header">
+    <a class="site-logo" href="{{site.baseurl}}" title="Zoomforth">Zoomforth</a>
+    <button class="btn-nav js-btn-nav">
+        <span class="btn-nav--line"></span>
+        <span class="btn-nav--line"></span>
+    </button>
+    <nav class="nav-primary js-nav-primary">
+        <ul>
+            <li id="link-dropdown"><a class="nav-link{% if page.layout == 'platform' %} active{% endif %}" href="#">Platform</a>
+                <ul class="dropdown" aria-label="submenu">
+                    <li><a class="icon-easy" href="/platform-key-features">Key features</a></li>
+                    <li><a class="icon-styles" href="/platform-site-editor">Site editor</a></li>
+                    <li><a class="icon-dna" href="/platform-security-features">Security </a></li>
+                    <li><a class="icon-data-analytics" href="/platform-data-analytics">Data analytics</a></li>
+                    <li><a class="icon-diple" href="/platform-integrations">Integrations</a></li>
+                    <li><a class="icon-support-team" href="/platform-support-services">Support services</a></li>
+                </ul>
+            </li>
+            <li id="link-dropdown"><a class="nav-link{% if page.section == 'use-cases' %} active{% endif %}" href="#">Use Cases</a>
+                <ul class="dropdown" aria-label="submenu">
+                    <li><a class="icon-learning" href="/learning">Learning</a></li>
+                    <li><a class="icon-insights" href="/marketing">Marketing</a></li>
+                    <li><a class="icon-recruitment" href="/recruiting">Recruiting</a></li>
+                    <li><a class="icon-sales" href="/sales">Sales</a></li>
+                </ul>
+            </li>
+            <li><a class="nav-link blue--medium{% if page.url == '/inspiration' %} active{% endif %}" href="/inspiration">Inspiration</a></li>
+            <li id="link-dropdown"><a class="nav-link blue--soft{% if page.url == '/events' %} active{% endif %}" href="#" aria-haspopup="true">Resources</a>
+                <ul class="dropdown" aria-label="submenu">
+                    <li><a class="icon-events" href="/academy">Academy</a></li>
+                    <li><a class="icon-blog" href="/blog">Blog</a></li>
+                    <!-- <li><a class="icon-blog" href="/blog">Blog</a></li> -->
+                    <li><a class="icon-case-studies" href="/case-studies">Case Studies</a></li>
+                    <li><a class="icon-events" href="/events">Events</a></li>
+                    <li><a class="icon-support" href="/faq">FAQ</a></li>
+                    <li><a class="icon-help" href="https://support.zoomforth.com">Help Center</a></li>
+                    <li><a class="icon-support" href="/whitepapers">Whitepapers</a></li>
+                </ul>
+            </li>
+            <li><a class="nav-link orange{% if page.url == '/about' %} active{% endif %}" href="/about">About Us</a></li>
+            <li class="vertical-rule"></li>
+            <li><a class="nav-link teal" class="nav-link" href="{{site.app_url}}/login" title="Sign in" rel="nofollow" target="_blank">Sign In</a></li>
+            <li class="btn-item"><a class="cta cta--primary" href="/request-demo">Request a Demo</a></li>
+        </ul>
+    </nav>
+</header>
+{% endunless %}
+
+<style type="text/css">
+    .nav-primary ul.dropdown {
+        display: none;
+    }
+
+    .show-ul ul.dropdown {
+        display: block !important;
+    }
+</style>
+
+<script>
+$("#link-dropdown a").on("click", function(event) {
+  $(event.target).closest("ul li").toggleClass("show-ul");
+});
+</script>

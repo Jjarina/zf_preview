@@ -1,0 +1,64 @@
+<footer style="background-color: {{include.background}}">
+    <section>
+      <a href="/">
+        <img src="{{ 'assets/svg/logo.svg' | relative_url }}" alt="Zoomforth logo" title="Zoomforth Logo" width="176"
+          height="30" loading="lazy">
+      </a>
+      <div>
+        <h4>Product</h4>
+        <a href="{{ site.baseurl }}inspiration">Inspiration</a>
+        <a href="{{ site.baseurl }}platform-key-features">Key features</a>
+        <a href="{{ site.baseurl }}platform-site-editor">Site editor</a>
+        <a href="{{ site.baseurl }}platform-security-features">Security</a>
+        <a href="{{ site.baseurl }}platform-data-analytics">Data analytics</a>
+        <a href="{{ site.baseurl }}platform-integrations">Integrations</a>
+        <a href="{{ site.baseurl }}platform-support-services">Support services</a>
+      </div>
+      <div>
+        <h4>Use cases</h4>
+        <a href="{{site.baseurl}}learning">Learning</a>
+        <a href="{{site.baseurl}}marketing">Marketing</a>
+        <a href="{{site.baseurl}}recruiting">Recruiting</a>
+        <a href="{{site.baseurl}}sales">Sales</a>
+        <!-- <a href="{{site.baseurl}}#">Internal Communications</a>
+        <a href="{{site.baseurl}}#">Client Communications</a>  -->
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="{{site.baseurl}}academy">Academy</a>
+        <a href="{{site.baseurl}}blog" title="Zoomforth Blog">Blog</a>
+        <a href="{{site.baseurl}}case-studies">Case Studies</a>
+        <a href="{{site.baseurl}}comparisons">Comparisons</a>
+        <a href="{{site.baseurl}}events">Events</a>
+        <a href="{{site.baseurl}}faq">FAQs</a>
+        <a href="https://support.zoomforth.com/en/" target="_blank" title="Help Center">Help Center</a>
+        <a href="{{site.baseurl}}whitepapers">Whitepapers</a>
+      </div>
+      <div>
+        <h4>Info</h4>
+        <a href="javascript:void(0)" id="csconsentlink">Cookie Management</a>
+        <a href="{{site.baseurl}}esg">ESG</a>
+        <a href="{{site.baseurl}}privacy">Privacy Policy</a>
+        <a href="{{site.baseurl}}security">Security</a>
+        <a href="{{site.baseurl}}terms">Terms of use</a>
+      </div>
+    </section>
+    <section>
+      <div>
+        <p>© {{ "now" | date:"%Y"}} All Rights Reserved</p>
+      </div>
+      <div>
+        <a href="https://twitter.com/zoomforth" target="_blank">Twitter</a>
+        <a href="https://www.linkedin.com/company/zoomforth/" target="_blank">LinkedIn</a>
+      </div>
+    </section>
+  </footer>
+<!-- Mobile navigation -->
+    <script defer>
+        $(document).ready(function(){
+            $('.js-btn-nav').click(function() {
+                $('.js-btn-nav, .js-primary-header').toggleClass('active');
+            $('body').toggleClass('no-scroll');
+            });
+        });
+    </script>

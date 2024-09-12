@@ -1,0 +1,9 @@
+<section id="video_{{ include.id }}" class="page-inner use_case_videos">
+  <a href="javascript:void(0)" onclick="play('{{ include.id }}')">
+    <img src="{{site.baseurl}}assets/img/{{ include.img }}" alt="{{ include.alt }}">
+    <img src="{{ 'assets/svg/icon-play-button.svg' | relative_url }}" alt="Play button" class="play_button">
+  </a>
+  <script src="https://fast.wistia.com/embed/medias/' + id + '.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+</section>
+
+<!-- {% include video-wrap.html id='8bwz5drun2' img='use-case-marketing-video.webp' alt='Video about Zoomforth microsites for marketing' %} -->

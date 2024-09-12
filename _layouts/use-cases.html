@@ -1,0 +1,83 @@
+---
+layout: compress
+---
+{% include head.html %}
+
+<body>
+    <a class="skip-to-content-link" href="#main">Skip to content</a>
+    {% include masthead.html %}
+
+<div class="hero-wrapper">
+  <div class="hero-content" id="main">
+{% if page.page_intro %}
+    <h1 class="heading-display">{{ page.page_heading }}</h1>
+    <p>{{ page.page_intro }}</p>
+{% else %}
+    <h1 class="heading-display cta-margin">{{ page.page_heading }}</h1>
+{% endif %}
+    <a class="cta cta--primary" href="/request-demo">Request a Demo <img src="/assets/svg/arrow_right.svg" alt=""></a>
+    <div class="hero-media">
+      <picture>
+        <source srcset="/assets/img/{{ page.hero_media }}.webp" type="image/webp">
+        <source srcset="/assets/img/{{ page.hero_media }}.jpg" type="image/jpeg">
+        <img src="/assets/img/{{ page.hero_media }}.jpg" alt="screenshot of microsite with Zoomforth app features on overlaid">
+      </picture>
+    </div>
+  </div><!--/hero-content-->
+</div><!--/hero-wrapper-->
+
+{% if page.url == "/" %}{% include social-proof.html %}{% endif %}
+
+{{ content }}
+
+{% if page.section == 'use-cases' %}
+{% include social-proof.html %}
+<div class="page-wrapper">
+  <section class="page-inner">
+    
+  {% if page.url contains 'recruiting' %}
+  <h2 class="headline">Check out more use cases of Zoomforth's online microsite software</h2>
+  {% else %}
+  <h2 class="headline">Check out more use cases</h2>
+  {% endif %}
+  <div class="learn-more-wrap">
+    {% if page.url != "/sales" %}
+      <div class="learn-more-panel">
+          <h3>Sales</h3>
+          <p>Increase client engagement and sales conversions with high-touch digital sales proposals, leave-behinds after orals and client onboarding sites.</p>
+          <a class="plain-link arrow" href="/sales" title="Learn more about using Zoomforth for sales">Learn more <img src="/assets/svg/arrow_right_blue.svg" alt=""></a>
+      </div>
+    {% endif %}
+    {% if page.url != "/marketing" %}
+      <div class="learn-more-panel">
+        <h3>Marketing</h3>
+        <p>Grow your key accounts with customized event sites, campaign landing pages, targeted digital newsletters and information portals.</p>
+        <a class="plain-link arrow" href="/marketing" title="Learn more about using Zoomforth for marketing">Learn more <img src="/assets/svg/arrow_right_blue.svg" alt=""></a>
+      </div>
+    {% endif %}
+    {% if page.url != "/learning" %}
+      <div class="learn-more-panel">
+        <h3>Learning</h3>
+        <p>Tailor your learning programs with customized resource portals and event pages. Curate content for micro-learning experiences.</p>
+        <a class="plain-link arrow" href="/learning" title="Learn more about using Zoomforth for learning">Learn more <img src="/assets/svg/arrow_right_blue.svg" alt=""></a>
+      </div>
+    {% endif %}
+    {% if page.url != "/recruiting" %}
+      <div class="learn-more-panel">
+        <h3>Recruiting</h3>
+        <p>Attract top talent with targeted job postings, interview preparation sites, personalized offer sites and new hire onboarding hubs.</p>
+        <a class="plain-link arrow" href="/recruiting" title="Learn more about using Zoomforth for recruitment">Learn more <img src="/assets/svg/arrow_right_blue.svg" alt=""></a>
+      </div>
+    {% endif %}
+
+    </div>
+  </section>
+</div>
+
+{% endif %}
+{% include cta-main.html %}
+{% include footer.html %}
+<script defer src="/assets/js/custom.js"></script>
+{% include salesoft-tracking.html %}
+</body>
+</html>

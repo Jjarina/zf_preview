@@ -1,0 +1,96 @@
+---
+layout: compress
+---
+{% include head.html%}
+
+<body>
+  <header class="lessons-header">
+    <nav>
+      <a href="{{ 'academy' | relative_url }}">
+        <img src="{{ 'assets/svg/zf_academy.svg' | relative_url}}" alt="Logo Zoomforth"
+          title="Home Zoomforth Academy" width="230" height="42">
+      </a>
+      <a href="{{site.baseurl}}" title="zoomforth.com">Go to Zoomforth.com</a>
+    </nav>
+  </header>
+  <!-- The title, the category, the time, the objectives, the video, the resource links and the next class, are taken from the frontmatter, from the markdown file, of each academy lesson. -->
+  <main class="academy-lesson">
+    <section>
+      <h1>{{page.page_heading}}</h1>
+      <span>Media: video & written how-to articles</span><span> • </span><span>{{page.category}}</span><span> •
+      </span><span>Under {{page.time}}</span>
+      <div>
+        <h2>Learning objective</h2>
+        <p>{{page.subtitle-objectives}}</p>
+        <ul>
+          {% for objective in page.objectives %}
+          <li>{{objective}}</li>
+          {% endfor %}
+        </ul>
+        <h2>Video tutorial</h2>
+        {{page.video_tutorial}}
+        {% if page.video_transcript %}
+        <div class="lesson-resources">
+          <h3>Resources</h3>
+          <ul>
+            {% for resource in page.resources %}
+            {% for link in resource %}
+            <li><a href="{{ link[1] }}" target="_blank">{{ link[0] }}</a></li>
+            {% endfor %}
+            {% endfor %}
+          </ul>
+        </div>
+        <h2>Video transcript</h2>
+        <!-- Here is the transcript of each video by class. This is taken from the markdown file corresponding to the class. -->
+        {{content | markdownify}}
+        {% endif %}
+      </div>
+      <div class="previous-next-lesson">
+        <a href="{{site.baseurl}}academy" class="cta cta--ghost">Back to course list</a>
+        {% if page.next_lesson %}
+        <a href="{{site.baseurl}}{{page.next_lesson}}" class="cta cta--ghost">Next course</a>
+        {% endif %}
+      </div>
+    </section>
+    <!-- End content lesson -->
+    <!-- This menu work whit the data academy site file. -->
+    <aside class="lessons-menu">
+      <a href="{{site.baseurl}}academy">
+        <img src="{{ 'assets/svg/arrow-left-blue.svg' | relative_url }}" alt="Arrow left to zoomforth courses">Back to course list</a>
+      <!-- This code loop renders the aside section menu. Access the information of each category in the first cycle. The second cycle identifies each course within the category. To modify the information, it can be done directly in the _data/academy file -->
+      <div class="accordion">
+        {% for item in site.data.academy %}
+        {% assign cat = item[0] %}
+        <div {% if cat contains page.category %}class="contentBox active"{% else %}class="contentBox"{% endif %}>
+          <h3 class="label">{{ cat }}</h3>
+          <div class="accordion_content">
+            {% for class in site.data.academy[cat] %}
+            <a href="{{site.baseurl}}academy/{{class.url}}" {% if class.title contains page.page_heading %} class="academy_menu_active" {% endif %}>{{ class.title }}</a>
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </aside>
+    <!-- End menu -->
+  </main>
+  <section class="comparisons-cta lessons-cta">
+    <h2>Cool features and fun stuff</h2>
+    <p>Check out our free workshops and training courses, and learn how to take your sites to the next level. </p>
+    <a class="cta cta--white" href="{{site.baseurl}}events">Find out more <img src="/assets/svg/arrow_right.svg" alt="Arrow right"></a>
+  </section>
+  {% include footer.html %}
+</body>
+
+  {% include salesoft-tracking.html %}
+
+  <script>
+    const accordion = document.getElementsByClassName('contentBox');
+
+    for (i = 0; i<accordion.length; i++ ){
+      accordion[i].addEventListener('click', function(){
+        this.classList.toggle('active');
+      })
+    }
+  </script>
+</html>

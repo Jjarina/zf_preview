@@ -1,0 +1,39 @@
+
+
+// Text decorations
+
+.text-decorations {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: "";
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    width: 110%;
+    height: 200%;
+    z-index: -1;
+  }
+}
+
+.circled-text-img {
+  &::before {
+    background-image: url(/assets/img/circled-text-img.png);
+  }
+}
+
+.underline-text-img {
+  &::before {
+    background-image: url(/assets/img/underline-text-img.png);
+    top: auto;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    height: 100%;
+  }
+}

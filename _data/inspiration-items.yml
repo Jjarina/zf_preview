@@ -1,0 +1,356 @@
+# Formatting:
+# 
+# name: Name to appear as heading#
+# image: image thumbnail (filename and filetype only, path not required)
+# url: url to view (subdomain of share.zoomforth.com not shown)
+# category1: Marketing, Sales, Learning & Events, and Recruiting & onboarding.
+# paragraph: Introduction about each topic 
+# 
+# Note: 'Category' will automatically add a class to the parent <li>. If additional categories are required, update if statements and javascript in 'inspiration.html' and modify/add classes to _layout.scss.
+
+# Marketing
+
+- name: RFP response
+  image: gallery-site-1-rfp-response-prof-services
+  url: /gallery-site-1-rfp-response-prof-services#/subpage/567f4
+  category1: Sales
+  paragraph: Captivate your audience with a Request for proposal (RFP) page that brings your vision to life.
+
+- name: RFP supplementary details
+  image: gallery-site-2-rfp-supplementary-details
+  url: /gallery-site-2-rfp-supplementary-details
+  category1: Sales
+  paragraph: Expand on your Request for proposal (RFP) by presenting supplementary details as a compelling digital content experience.
+
+- name: "Marketing landing page 1"
+  image: gallery-landing-page-1-marketing-services-theme
+  url: /gallery-landing-page-1-marketing-services-theme#/subpage/ourpurpose
+  category1: Marketing
+  paragraph: Engage your audience and drive conversions with an immersive, media-rich microsite.
+
+- name: "Marketing landing page 2"
+  image: gallery-site-4-marketing-landing-page
+  url: /gallery-site-4-marketing-landing-page#subpage/home
+  category1: Marketing
+  paragraph: Convey the value of your offering with tailored landing pages that increase engagement and generate leads.
+
+- name: "Marketing landing page 3"
+  image: gallery-marketing-landing-page
+  url: /gallery-marketing-landing-page#/subpage/c6kr9
+  category1: Marketing
+  paragraph: Guide visitors through a visually appealing journey that educates and inspires action.
+
+- name: "Whitepaper"
+  image: page-version-viewer
+  url: /gallery-site-8-whitepaper-prof-services#subpage/home
+  category1: Marketing
+  paragraph: Present and visualize key research findings with a customizable whitepaper template.
+
+- name: Corporate brand microsite
+  image: inspiration_sales_corporate-site
+  url: /gallery-corporate-marketing-sales
+  category1: Marketing
+  paragraph: Build your digital presence with a corporate brand microsite that communicates your company narrative, demonstrates your role in your industry, and guides prospective clients toward how they can find out more.
+
+- name: "Newsletter"
+  image: gallery-site-6-newsletter
+  url: /gallery-site-6-newsletter#subpage/xp92s/section/kmqpl
+  category1: Marketing
+  category2: Learning & Events
+  paragraph: Engage your readership with a visually stunning newsletter that stands out from the crowd.
+
+- name: "Thought leadership portal"
+  image: gallery-site-7-thought-leadership-portal
+  url: /gallery-site-7-thought-leadership-portal
+  category1: Marketing
+  category2: Learning & Events
+  paragraph: Whatever the topic, ensure your voice is heard with a thought leadership portal designed to encourage engagement.
+
+# Sales
+
+- name: "Presales microsite"
+  image: presales-microsite
+  url: /presales-inspiration-gallery-site
+  category1: Sales
+  paragraph: Simplify the buying process by sharing and storing your comms with secure, trackable microsite.
+
+- name: "Client portal"
+  image: gallery-site-11-client-portal-logistics-prof-services
+  url: /gallery-site-11-client-portal-logistics-prof-services
+  category1: Sales
+  paragraph: Walk clients through your process step-by-step with a digital client portal custom-made for collaboration.
+
+- name: "Client onboarding"
+  image: page-version-viewer-3
+  url: /client-portal-2-creative-agency
+  category1: Sales
+  paragraph: Onboard clients in style with a dedicated client portal that’s every bit as innovative as your creations.
+
+- name: Marketing sales proposal microsite
+  image: inspiration_sales_marketing-sales-proposal
+  url: /gallery-sales-proposal-example
+  category1: Sales
+  paragraph: Present your services in style with a custom-designed marketing sales microsite that reflects your business’ branding.
+
+- name: Sales proposal microsite template
+  image: inspiration_sales_sales-proposal-02
+  url: /marketing-site-sales-proposal-co-branding
+  category1: Sales
+  paragraph: Let your digital proposal take center stage with a minimalist sales proposal microsite that speaks for itself. 
+
+- name: Pursuits / Bid proposal microsite example
+  image: inspiration_sales_pursuit-bids-proposal
+  url: /marketing-proposal-professional-services
+  category1: Sales
+  paragraph: Transform your bid pursuit strategy by hosting your bid proposals digitally on a custom microsite.
+
+- name: Onboarding microsite design
+  image: inspiration_sales_onboarding-portal
+  url: /marketing-site-proposal-creative-agency
+  category1: Sales
+  paragraph: Quickly get both internal team members and external customers up to date on your existing partnerships.
+
+- name: Client onboarding
+  image: inspiration_sales_client-onboarding-portal
+  url: /marketing-site-account-onboarding-portal-acme
+  category1: Sales
+  paragraph: Host your business’ onboarding information securely with an accessible multi-page client onboarding microsite. 
+
+- name: Sales proposal
+  image: inspiration_sales_sales-proposal-01
+  url: /sales-proposal-rfp-response-clean-j
+  category1: Sales
+  paragraph: Present your sales proposal with pride with a sleek sales proposal microsite template.
+
+- name: Digital sales micropage
+  image: inspiration_sales_digital-sales-one-pager
+  url: /gallery-sales-one-pager-2021
+  category1: Sales
+  category2: Marketing
+  paragraph: Offer a detailed breakdown of your products or services with a digital sales microsite designed to engage and convert your target audience.
+
+- name: Sales one-pager
+  image: inspiration_sales_sales-one-pager
+  url: /marketing-site-sales-1-pager-dark
+  category1: Sales
+  category2: Marketing
+  paragraph: Feature your product with a simple, one-page microsite designed with your sales funnel in mind.
+
+- name: Sales summary
+  image: inspiration_sales_sales-summary
+  url: /marketing-site-sales-1-pager-clean
+  category1: Sales
+  category2: Marketing
+  paragraph: Integrate multimedia elements to engage your audience using our sales summary microsite template.
+
+- name: Sales landing page
+  image: inspiration_sales_sales-landing-page
+  url: /marketing-site-sales-1-pager-vibrant
+  category1: Sales
+  category2: Marketing
+  paragraph: A classic sales landing page to feature your product and guide leads toward conversion. 
+
+# Recruiting & onboarding
+
+- name: Personalized onboarding portal
+  image: inspiration_recruiting_onboarding-portal
+  url: /personalized-onboarding-portal
+  category1: Recruiting & onboarding
+  paragraph: Bring your team together with access to a personalized onboarding portal.
+  class: recruiting
+
+- name: New team member onboarding
+  image: inspiration_recruiting_new-job-onboarding
+  url: /gallery-new-hire-onboarding-site
+  category1: Recruiting & onboarding
+  paragraph: Bring new hires up to speed with a new team member onboarding microsite that’s customized to your industry, brand, and team culture.
+  class: recruiting
+
+- name: Job posting
+  image: inspiration_recruiting_job-posting-01
+  url: /marketing-site-location-recruitment-landing-vibrant
+  category1: Recruiting & onboarding
+  paragraph: Capture potential candidates’ attention with a dedicated job posting microsite that presents your job opening, responsibilities, and company info all in one place.
+  class: recruiting
+
+- name: Candidate experience
+  image: inspiration_recruiting_candidate-experience-01
+  url: /marketing-site-candidate-journey
+  category1: Recruiting & onboarding
+  paragraph: Guide candidates through what they can expect as they complete the interview journey at your organization with a personalized candidate experience portal.
+  class: recruiting
+
+- name: Careers
+  image: inspiration_recruiting_careers
+  url: /marketing-site-careers-site-with-ats-clean
+  category1: Recruiting & onboarding
+  paragraph: Advertise open positions, describe career growth opportunities, and display company benefits all in one place with a custom careers portal microsite for your business.
+  class: recruiting
+
+- name: New hire welcome
+  image: inspiration_recruiting_new-hire
+  url: /marketing-site-new-hire-welcome-guide
+  category1: Recruiting & onboarding
+  paragraph: Welcome new hires with an onboarding microsite that’s customized to your industry, brand, and team culture.
+  class: recruiting
+
+- name: On-site portal
+  image: inspiration_recruiting_on-site-portal
+  url: /marketing-site-client-workshop-basic
+  category1: Recruiting & onboarding
+  paragraph: Offer a conference, workshop, or event on-site portal to attendees with a custom microsite that orients and engages your audience.
+  class: recruiting
+
+- name: C-suite portal
+  image: inspiration_recruiting_c-suite-portal
+  url: /gallery-csuite-site
+  category1: Recruiting & onboarding
+  paragraph: Attract top executive candidates with a dedicated C-suite portal designed to lead candidates through the responsibilities, benefits, and culture they can expect at your organization.
+  class: recruiting
+
+- name: Careers portal
+  image: inspiration_recruiting_careers-portal
+  url: /gallery-careers-site-with-ats-j-
+  category1: Recruiting & onboarding
+  paragraph: Advertise open positions, describe career pathways, and display company benefits all in one place with a custom careers portal microsite for your business.
+  class: recruiting
+
+- name: New hire welcome
+  image: inspiration_recruiting_new-hire-welcome
+  url: /template-new-hire-welcome-guide-style-guide
+  category1: Recruiting & onboarding
+  paragraph: Welcome new hires with an onboarding microsite that’s customized to your industry, brand, and team culture.
+  class: recruiting
+
+- name: Job posting
+  image: inspiration_recruiting_job-posting-02
+  url: /data-analyst
+  category1: Recruiting & onboarding
+  paragraph: Capture potential candidates’ attention with a dedicated job posting microsite that presents your job opening, responsibilities, and company info all in one place.
+  class: recruiting
+
+- name: Interview prep
+  image: inspiration_recruiting_interview-prep
+  url: /gallery-interview-preparation
+  category1: Recruiting & onboarding
+  paragraph: Put candidates at ease with a dedicated interview prep microsite designed to walk them through the interview process at your organization, from start to finish.
+  class: recruiting
+
+- name: Corporate careers
+  image: inspiration_recruiting_corporate-careers
+  url: /gallery-corporate
+  category1: Recruiting & onboarding
+  paragraph:
+  class: recruiting
+
+- name: Candidate journey
+  image: inspiration_recruiting_candidate-journey
+  url: /gallery-candidate-journey-exec
+  category1: Recruiting & onboarding
+  paragraph: Guide prospective employees through what they can expect from the recruitment process at your company with a personalized candidate journey microsite.
+  class: recruiting
+
+- name: Candidate experience
+  image: inspiration_recruiting_candidate-experience-02
+  url: /interview-prep
+  category1: Recruiting & onboarding
+  paragraph: Guide prospective employees through what they can expect from the recruitment process at your company with a personalized candidate experience microsite.
+  class: recruiting
+
+# Learning & Events
+
+- name: "Learning hub 1"
+  image: gallery-site-9-learning-hub-1-prof-services
+  url: /gallery-site-9-learning-hub-1-prof-services
+  category1: Learning & Events
+  paragraph: Offer paced, asynchronous learning opportunities with a custom learning portal featuring webinars, tutorials, podcasts, and videos.
+
+- name: "Learning hub 2"
+  image: page-version-viewer-2
+  url: /learning-hub-2-prof-services
+  category1: Learning & Events
+  paragraph: Immerse learners in an interactive learning environment designed to build their knowledge and boost retention.
+
+- name: Team growth platform
+  image: inspiration_learning_team-growth-platform
+  url: /gallery-learning-overview-site
+  category1: Learning & Events
+  paragraph: Accelerate your team’s professional development with a team growth platform custom-made for your organization.
+  class: learning
+
+- name: AGM event microsite
+  image: agm-site
+  url: /agm-site
+  category1: Learning & Events
+  paragraph: Host your Annual General Meeting agenda with ease on a custom AGM event microsite that lets attendees view the schedule, speakers, venue, and topics in an engaging digital format.
+  class: learning
+
+- name: Client workshop
+  image: clien-workshop
+  url: /marketing-site-client-workshop
+  category1: Learning & Events
+  paragraph: Display your client workshop schedule and prompt attendees to prepare with a client workshop microsite tailored to your specific requirements.
+  class: learning
+
+- name: Client workshop portal
+  image: inspiration_learning_event-landing-page
+  url: /marketing-site-event-landing-page
+  category1: Learning & Events
+  paragraph: Make registration easy with a client workshop portal featuring one-click sign-up alongside must-have scheduling information and speaker bios.
+  class: learning
+
+- name: Event landing page
+  image: event-landing-page
+  url: /marketing-site-event
+  category1: Learning & Events
+  paragraph: Create a digital event space and prepare attendees ahead of time with a dedicated event landing page.
+  class: learning
+
+- name: Consultant onboarding
+  image: inspiration_learning_learning-events-1
+  url: /gallery-internal-onboarding-for-consultants
+  category1: Learning & Events
+  paragraph: Bring consultant team members on board with a consultant onboarding microsite that highlights your company culture and lays out the scope of their project in an accessible digital format.
+  class: learning
+
+- name: Newsletter example
+  image: newsletter-from-leadership
+  url: /tempsite-newsletter-from-leadership
+  category1: Learning & Events
+  paragraph: Engage your audience with a multimedia company newsletter published on a custom newsletter microsite.
+  class: learning
+
+- name: User experience design
+  image: inspiration_learning_learning-events-3
+  url: /nano-learning-site
+  category1: Learning & Events
+  paragraph: Guide participants through any topic with an educational microsite designed to encourage engagement and retention of information.
+  class: learning
+
+- name: User experience design v2
+  image: inspiration_learning_learning-events-4
+  url: /gallery-learning-site-green
+  category1: Learning & Events
+  paragraph: Guide participants through a given topic with an educational microsite designed to encourage engagement and retention of information.
+  class: learning
+
+- name: Industry learning hub
+  image: inspiration_learning_learning-events-5
+  url: /gallery-industry-learning-hub
+  category1: Learning & Events
+  paragraph: Encourage ongoing development by hosting your training courses, workshops, and articles using our industry learning hub microsite template.
+  class: learning
+
+- name: Live event
+  image: live-event
+  url: /tempsite-event
+  category1: Learning & Events
+  paragraph: Create a digital event space to bring the conversation online with a live event microsite.
+  class: learning
+
+- name: Dataconf event
+  image: dataconf-event
+  url: /gallery-dataconf-event
+  category1: Learning & Events
+  paragraph: Give your conference a digital home of its own with a dedicated conference microsite.
+  class: learning

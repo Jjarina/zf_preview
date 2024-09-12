@@ -1,0 +1,600 @@
+// Academy landing
+.academy-header {
+  position: relative;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  @media (max-width: 1280px) {
+    padding: 0 15px;
+  }
+
+  h1{
+    font-size: $font-size-24;
+    margin: 0;
+  }
+
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    width: 100%;
+    max-width: 1128px;
+
+    @media (max-width: 767px) {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+
+    a {
+      margin: 0;
+
+      &:first-child {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        color: $clr-blue--dark;
+        font-size: $font-size-23;
+        font-weight: 900;
+        text-transform: capitalize;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      &:last-child {
+        font-size: $font-size-18;
+        color: $clr-grey;
+        text-align: right;
+      }
+
+      @media (max-width: 1280px) {
+        padding-bottom: 20px 15px;
+      }
+    }
+  }
+
+  hr {
+    width: 100%;
+    height: 1px;
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid $clr-grey-light;
+  }
+
+  section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 3rem;
+    padding: 80px 0;
+    max-width: 1128px;
+
+    h1 {
+      font-size: clamp(1.5em, 64px, 3em);
+      margin: 0;
+      max-width: 576px;
+    }
+
+    p {
+      width: 100%;
+      max-width: 360px;
+      margin: 0;
+    }
+  }
+}
+
+.academy-video {
+  width: 100%;
+  max-width: 1128px;
+  height: 640px;
+  margin: 0 auto 60px;
+
+  @media (max-width: 1280px) {
+    padding: 0 15px;
+  }
+
+  @media (max-width: 992px) {
+    max-width: 700px;
+    height: 400px;
+  }
+
+  @media (max-width: 440px) {
+    max-width: 360px;
+    height: 160px;
+  }
+
+}
+
+.academy-categorys {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 1280px) {
+    padding: 0 15px 60px;
+  }
+
+  ul {
+    width: 100%;
+    max-width: 1128px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+
+    li {
+      list-style: none;
+      margin: 0 0 2rem;
+      width: auto;
+      padding: 1rem 1.5rem;
+      text-align: center;
+      font-size: $font-size-16;
+      display: inline-block;
+      border-radius: 42px;
+      background: none;
+      line-height: 1;
+      transition: 0.3s ease;
+
+      &:hover,
+      &.active {
+        background: lighten($clr-purple, 65%);
+        cursor: pointer;
+      }
+
+      a {
+        color: $clr-grey;
+      }
+    }
+
+    hr {
+      width: 100%;
+      height: 1px;
+      margin: 0;
+      border-top: 1px solid $clr-grey-light;
+    }
+  }
+}
+
+.tutorials {
+  font-size: $font-size-36;
+  margin: 0;
+
+  @media (max-width: 1280px) {
+    padding: 0 15px;
+  }
+}
+
+.courses {
+  width: 100%;
+  max-width: 1128px;
+  margin: 32px auto 54px;
+
+  @media (max-width: 1280px) {
+    padding: 0 15px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0 15px;
+  }
+
+  &>div {
+    display: flex;
+    gap: 2.4rem;
+    flex-wrap: wrap;
+    padding: 32px 0 64px;
+
+    @media (max-width: 911px) {
+      justify-content: center;
+    }
+  }
+
+  p {
+    max-width: 600px;
+    margin: 16px 0 0;
+    padding-bottom: 8px;
+    font-size: $font-size-18;
+  }
+}
+
+.tutorial {
+  position: relative;
+  width: 264px;
+  height: 301px;
+  background-color: white;
+  display: inline-block;
+  border-radius: $radius-panels;
+  transition: all .3s ease;
+  color: $clr-black;
+
+  .tutorial_img {
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+    height: 160px;
+    width: 100%;
+
+    img {
+      -o-object-fit: cover;
+      object-fit: cover;
+      transition: transform .3s ease;
+      max-width: 100%;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 11px 33px #e0e0e0;
+    text-decoration: none;
+  }
+
+  &:hover img {
+    transform: scale(1.1);
+  }
+
+  .tutorial_info {
+    width: 100%;
+    height: 141px;
+    padding: 16px 24px;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h3 {
+      font-weight: 350;
+      letter-spacing: $tracking-headings;
+      line-height: $line-height--headings;
+    }
+
+    div {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    div span {
+      color: $clr-mid-grey;
+      font-size: $font-size-14;
+    }
+  }
+}
+
+.academy-help {
+  width: 100%;
+  background-color: $clr-grey-light;
+  padding: 90px 15px;
+
+  h2 {
+    text-align: center;
+    font-size: $font-size-48;
+  }
+
+  p {
+    text-align: center;
+    margin: 0;
+  }
+
+  a{
+    font-size: $font-size-16;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 360px));
+    gap: 1rem;
+    justify-content: center;
+    padding: 60px 0 0;
+  }
+
+  li {
+    list-style: none;
+    text-align: center;
+
+    h3 {
+      font-size: 2.4rem;
+    }
+
+    p {
+      font-size: $font-size-16;
+    }
+  }
+}
+
+// Academy lessons landing
+.lessons-header {
+  position: relative;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  @media (max-width: 1280px) {
+    padding: 0 15px;
+  }
+
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    width: 100%;
+    max-width: 1224px;
+
+    @media (max-width: 992px) {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1em;
+
+    }
+
+    a {
+      margin: 0;
+
+      &:first-child {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        color: $clr-blue--dark;
+        font-size: $font-size-23;
+        font-weight: 900;
+        text-transform: capitalize;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      &:last-child {
+        font-size: $font-size-18;
+        color: $clr-grey;
+        text-align: right;
+      }
+
+      @media (max-width: 1280px) {
+        padding-bottom: 20px 15px;
+      }
+    }
+  }
+
+  hr {
+    width: 100%;
+    height: 1px;
+    margin: 0;
+    border-top: 1px solid $clr-grey-light;
+  }
+
+  section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 3rem;
+    padding: 80px 0;
+    max-width: 1128px;
+
+    h1 {
+      font-size: clamp(48px, $font-size-64, 6rem);
+      margin: 0;
+      max-width: 576px;
+    }
+
+    p {
+      width: 100%;
+      max-width: 360px;
+      margin: 0;
+    }
+  }
+}
+
+// Lessons content
+.academy-lesson {
+  position: relative;
+  width: 100%;
+  max-width: 1224px;
+  margin: 40px auto 80px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: flex-start;
+
+  @media (min-width: 1240px) {
+    justify-content: space-between;
+  }
+
+  p,
+  li {
+    font-size: $font-size-18;
+  }
+
+  section {
+    width: 100%;
+    max-width: 808px;
+    background-color: $clr-white;
+    padding: 40px;
+    border-radius: 12px;
+
+    h1 {
+      margin-bottom: 16px;
+      font-size: clamp(1.5em, 48px, 2.5em);
+    }
+
+    h2 {
+      margin: 32px 0 16px;
+    }
+
+    span {
+      font-size: $font-size-16;
+      color: $clr-mid-grey;
+      padding: 0 4px;
+    }
+
+    >div:not(div:last-child) {
+      border-top: 1px solid $clr-grey-light;
+      margin-top: 32px;
+    }
+
+    .wistia_responsive_padding {
+      margin-bottom: 3rem;
+    }
+  }
+
+  aside {
+    width: 100%;
+    max-width: 390px;
+    background-color: $clr-white;
+    padding: 32px 0;
+  }
+}
+
+.lesson-resources {
+  background-color: $clr-grey-light;
+  padding: 24px;
+  margin-bottom: 90px;
+  border-radius: $radius-panels;
+
+  h3 {
+    font-size: $font-size-24;
+    font-weight: 300;
+  }
+
+  ul {
+    padding: 0;
+
+    li {
+      list-style: none;
+    }
+  }
+}
+
+// Academy lessons menu
+
+.lessons-menu {
+  border-radius: 12px;
+
+  @media (min-width: 1240px) {
+    position: sticky;
+    left: calc((100% - (390px + 808px))/2);
+    top: 0;
+  }
+
+  a:not(.accordion_content a) {
+    display: inline-block;
+    margin: 1.5rem 2.2rem;
+    font-size: $font-size-16;
+
+    img {
+      margin-right: 16px;
+    }
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+}
+
+.accordion {
+  max-width: 100%;
+
+  .contentBox {
+    position: relative;
+    margin: 0;
+    border-top: 1px solid $clr-grey-light;
+
+    .label {
+      position: relative;
+      margin: 1.5rem 2.2rem;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: $font-size-16;
+      cursor: pointer;
+
+      &::before {
+        content: url(../../assets/svg/icon-plus.svg);
+        width: 16px;
+        height: 16px;
+        font-weight: normal;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        transition: all 0.15s ease-in-out;
+      }
+    }
+
+    .accordion_content {
+      position: relative;
+      margin: 0 24px;
+      background-color: white;
+      height: min-content;
+      max-height: 0;
+      overflow: hidden;
+      display: flex;
+      gap: 1em;
+      flex-direction: column;
+      transition: all 200ms linear;
+      border-left: 1px solid $clr-grey-light;
+
+
+      a {
+        font-weight: 300;
+        color: $clr-black;
+        margin: 0 24px;
+        font-size: $font-size-16;
+        letter-spacing: $tracking-regular;
+      }
+    }
+
+    &.active .accordion_content {
+      max-height: 1200px;
+      margin: 24px 24px;
+    }
+
+    &.active .label::before {
+      transform: rotate(45deg);
+      transform-origin: center center;
+    }
+  }
+}
+
+.academy_menu_active {
+  color: $clr-black  !important;
+  text-decoration: underline 1px dashed #e092e3;
+  text-underline-offset: 4px;
+}
+
+.previous-next-lesson {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.4rem;
+  flex-wrap: wrap;
+
+  @media (max-width: 767px) {
+    justify-content: center;
+  }
+
+  a {
+    width: 100%;
+    max-width: 240px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,84 @@
+---
+layout: compress
+---
+{% include head.html %}
+
+<body>
+    <a class="skip-to-content-link" href="#main">Skip to content</a>
+    {% include masthead.html %}
+
+<div class="page-wrapper">
+
+    <div class="page-inner request-demo-page flex-contents mobile-flex-column">
+        
+        <div class="md-fifty-percent" id="main">
+            {{ content }}
+        </div>
+
+         <div class="md-fifty-percent">
+            <form action="https://formspree.io/f/myyllrzj" class="site-form" method="post">
+                <label for="email">Business email</label>
+                <input type="email" id="email" name="email" required>
+                <fieldset>
+                    <legend>Your name</legend>
+                    <div class="field-wrap">
+                        <label for="first-name">First name</label>
+                        <input type="text" id="first-name" name="first-name" required>
+                    </div>
+                    <div class="field-wrap">
+                        <label for="last-name">Last name</label>
+                        <input type="text" id="last-name" name="last-name" required>
+                    </div>
+                </fieldset>
+                <label for="company-name">Company name</label>
+                <input type="text" id="company-name" name="company-name" required>
+                <label for="use-case">Use case</label>
+                <select id="use-case" name="use-case" required>
+                    <option value="" disabled selected>Please select</option>
+                    <option value="Sales">Sales</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Recruiting">Recruiting</option>
+                    <option value="Learning">Learning</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="hidden" name="utm_source" value="">
+                <input type="hidden" name="utm_medium" value="">
+                <input type="hidden" name="utm_campaign" value="">
+                <input type="hidden" name="utm_term" value="">
+                <input type="hidden" name="utm_content" value="">
+                <button class="cta cta--bold" type="submit">Send</button>
+        </div>
+    </div>
+
+</div><!--/page-wrapper-->
+
+{% include social-proof.html %}
+
+{% include footer.html %}
+</body>
+
+<script defer>
+    // UTM Tracking
+    var queryForm = function (settings) {
+        var reset = settings && settings.reset ? settings.reset : false;
+        var self = window.location.toString();
+        var querystring = self.split("?");
+        if (querystring.length > 1) {
+            var pairs = querystring[1].split("&");
+            for (i in pairs) {
+                var keyval = pairs[i].split("=");
+                if (reset || sessionStorage.getItem(keyval[0]) === null) {
+                    sessionStorage.setItem(keyval[0], decodeURIComponent(keyval[1]));
+                }
+            }
+        }
+        var hiddenFields = document.querySelectorAll("input[type=hidden], input[type=text]");
+        for (var i = 0; i < hiddenFields.length; i++) {
+            var param = sessionStorage.getItem(hiddenFields[i].name);
+            if (param) document.getElementsByName(hiddenFields[i].name)[0].value = param;
+        }
+    }
+    setTimeout(function () { queryForm(); }, 3000);
+  </script>
+{% include salesoft-tracking.html %}
+</html>

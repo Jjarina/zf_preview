@@ -1,0 +1,17 @@
+// Content styles
+
+.content-media, .content-image {
+  @media (max-width: 991px) {
+    text-align: center;
+  }
+  img {
+    width: 100%;
+    max-width: 552px;
+    border-radius: $radius-media;
+  }
+  video {
+    width: 100%;
+    max-width: 552px;
+    border-radius: $radius-media;
+  }
+}

@@ -1,0 +1,51 @@
+---
+layout: compress
+---
+{% include head.html %}
+
+<body>
+    <a class="skip-to-content-link" href="#main">Skip to content</a>
+    {% include masthead.html %}
+<section class="comparisons-header">
+  <h1>{{page.page_heading}}</h1>
+  <p>{{page.page_intro}}</p>
+</section>
+
+<main class="comparisons-gallery dark-bg">
+  {{content}}
+</main>
+
+<section class="comparisons-question">
+  <h2>Got a question?</h2>
+  <p>We have the answers. Check out our Frequently Asked Questions, to help you decide whether we are the right fit for
+    your company.
+  </p>
+  <a href="{{site.baseurl}}faq" class="cta-landing cta--primary">See FAQs</a>
+</section>
+
+<section class="comparisons-cta">
+  <h2>Ready to see for yourself?</h2>
+  <p>Request a personalized demo and ask us about our free, 14-day trial.
+  </p>
+  <ul>
+    <li><img src="{{ 'assets/svg/icon-academy.svg' | relative_url }}" alt="Check" width="54" height="54"> Free training</li>
+    <li><img src="{{ 'assets/svg/icon-support-team.svg' | relative_url }}" alt="Check" width="54" height="54"> 24 hour support</li>
+    <li><img src="{{ 'assets/svg/icon-security.svg' | relative_url }}" alt="Check" width="54" height="54"> Enterprise-level security</li>
+    <li><img src="{{ 'assets/svg/icon-cost-savings.svg' | relative_url }}" alt="Check" width="54" height="54"> No hidden costs</li>
+  </ul>
+  <a href="{{site.baseurl}}request-demo" class="cta-landing cta--white">Request a Demo</a>
+</section>
+
+{% include footer.html %}
+</body>
+<script>
+  $(".toggle-nav li").click(function () {
+    var inputValue = $(this).attr("value");
+    var targetBox = $("." + inputValue);
+    $(this).addClass("active").siblings().removeClass("active");
+    $(".inspiration-items li").not(targetBox).hide();
+    $(targetBox).show();
+  });
+</script>
+{% include salesoft-tracking.html %}
+</html>

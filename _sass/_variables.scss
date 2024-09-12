@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "GT Zirkon";
+  font-weight: 400;
+  src: url("/assets/fonts/GT-Zirkon-Book.ttf") format("truetype"),
+    url("/assets/fonts/GT-Zirkon-Book.woff") format("woff"),
+    url("/assets/fonts/GT-Zirkon-Book.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "GT Zirkon";
+  font-weight: 700;
+  src: url("/assets/fonts/GT-Zirkon-Black.ttf") format("truetype"),
+    url("/assets/fonts/GT-Zirkon-Black.woff") format("woff"),
+    url("/assets/fonts/GT-Zirkon-Black.woff2") format("woff2");
+}
+
+// Typography Variables
+
+$main-font: "GT Zirkon";
+$font-stack: $main-font, sans-serif;
+$rem-reset: 62.5%;
+$font-size-80: 8rem;
+$font-size-64: 6.4rem;
+$font-size-48: 4.84rem;
+$font-size-36: 3.6rem;
+$font-size-30: 3rem;
+$font-size-28: 2.8rem;
+$font-size-24: 2.4rem;
+$font-size-23: 2.3rem;
+$font-size-20: 2rem;
+$font-size-18: 1.8rem;
+$font-size-16: 1.6rem;
+$font-size-14: 1.4rem;
+$line-height--regular: 1.5;
+$line-height--headings: 1.2;
+$line-height--display: 1.1;
+$tracking-regular: -0.01em;
+$tracking-headings: -0.04em;
+$tracking-uppercase: 0.1em;
+
+// Colors
+
+$clr-white: #fff;
+$clr-black: #000;
+$clr-mid-grey: #777;
+$clr-grey: #3D3E43;
+$clr-grey-light: #ECF0F5;
+$clr-grey-lines: #D2DFE3;
+$clr-white-bg: #F5FAFC;
+$clr-purple: #5B185E;
+$clr-purple--deep: #3E163F;
+$clr-pink: #F5DDF6;
+$clr-blue--rich: #134FEA;
+$clr-blue--soft: #0071AF;
+$clr-blue--medium: #33CCFF;
+$clr-blue--light: #ADEBFF;
+$clr-blue--dark: #23376B;
+$clr-teal: #068EAC;
+$clr-orange: #FFBF25;
+$clr-bg--blockquote: #E6F3F7;
+
+// Colors / Utility Values
+
+$clr-cta-primary: $clr-orange;
+$clr-cta-bold: $clr-blue--rich;
+$clr-panel: $clr-grey-light;
+$clr-icon-background: $clr-blue--light;
+$clr-light-bg: $clr-white-bg;
+$clr-icon-forgeround: $clr-blue--soft;
+
+// Styling
+
+$radius-buttons: 2px;
+$radius-sm: 4px;
+$radius-mid: 6px;
+$radius-panels: 12px;
+$radius-media: $radius-panels;
+$radius-tabs: 20px;
+
+// Placeholder class
+
+%page_width {
+  width: 100%;
+  max-width: 1128px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  @media (min-width: 1200px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+%bg_white {
+  background-color: $clr-white;
+}

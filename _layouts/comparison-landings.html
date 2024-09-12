@@ -1,0 +1,250 @@
+---
+layout: compress
+---
+{% include head.html %}
+
+<body>
+
+  <header class="hero-wrapper-comparison">
+    <div class="hero-comparison-nav">
+      <a href="{{site.baseurl}}" class="site-logo">
+        <img src="{{ 'assets/svg/logo.svg' | relative_url}}" alt="Logo Zoomforth" title="Home Zoomforth">
+      </a>
+      <a href="#">
+        <img src="{{ 'assets/img/icon-search.png' | relative_url}}" alt="Search">
+      </a>
+    </div>
+    <div class="hero-content">
+      <span class="eyebrow light-eyebrow">{{page.eyebrow}}</span>
+      <h1>{{page.page_heading}}</h1>
+      <p><strong>Swap static content for immersive, client-winning digital experiences.</strong> Use drag-and-drop editing to build unlimited, trackable microsites – no design experience needed.</p>
+      <a href="#form" class="cta-landing cta--bold">Get started today</a>
+      <small>Guided demo + free trial.</small>
+    </div>
+    <div class="hero-comparison-media">
+      <picture>
+        <source srcset="{{site.baseurl}}assets/img/{{page.hero-webp}}" type="image/webp">
+        <source srcset="{{site.baseurl}}assets/img/{{page.hero-png}}" type="image/jpeg">
+        <img src="{{site.baseurl}}assets/img/{{page.hero-png}}" alt="Mockup of site comparisons">
+      </picture>
+    </div>
+  </header>
+  <section class="proof-comparison">
+    <em><span></span> Trusted by three of the Big Four accounting firms <span></span></em>
+    <div class="proof-comparison--logos">
+      <img class="logo-small" src="{{'assets/img/social_proof/logo_supercell.webp'| relative_url }}" alt="Logo for Supercell">
+      <img src="{{'assets/img/social_proof/logo_appian.webp'| relative_url }}" alt="Logo for Appian">
+      <img src="{{'assets/img/social_proof/logo_careerbuilder.webp'| relative_url }}" alt="Logo for Career Builder">
+      <img src="{{'assets/img/social_proof/logo_randstad.webp'| relative_url }}" alt="Logo for Randstad">
+      <img src="{{'assets/img/social_proof/logo_braze.webp'| relative_url }}" alt="Logo for Braze">
+      <img src="{{'assets/img/social_proof/logo_teradata.webp'| relative_url }}" alt="Logo for Teradata">
+      <img src="{{'assets/img/social_proof/logo_att.webp'| relative_url }}" alt="Logo for AT&T">
+      <img src="{{'assets/img/social_proof/logo_out-leadership.webp'| relative_url }}" alt="Logo for Out Leadership">
+    </div>
+    <div class="social-proof-comparison">
+      <img src="/assets/svg/reviews_g2.svg" alt="Stars for reviews, showing 4.5 stars out of 5">
+    </div>
+  </section>
+  <section class="comparison-analytics">
+    <div class="page-inner flex-contents mobile-flex-column">
+      <div class="content-wrap md-fifty-percent">
+        <span class="eyebrow light-eyebrow">Why Zoomforth vs {{page.competitor}}?</span>
+        <h2>{{page.title-comparison}}</h2>
+        <p>{{page.intro-comparison}}</p>
+      </div>
+      <div class="comparison-content-media">
+        <img src="{{site.baseurl}}assets/img/{{page.img-comparison }}" alt="Cero's Logo for comparison">
+        <img src="{{ 'assets/img/zoomforth-comparison.webp' | relative_url }}" alt="Zoomforth's Logo for comparison">
+      </div>
+    </div>
+  </section>
+  <main class="comparison-content">
+    {{ content }}
+  </main>
+  <section class="comparison-benefits">
+    <span class="eyebrow light-eyebrow">Benefits for Enterprise</span>
+    <h2 {% if page.url == "/comparison-qwilr" %} style="font-size: 3.84rem;" {% endif %}>{{page.subtitle-benefits}}</h2>
+    <p>In a nutshell? Our Content Experience platform helps you cut costs and grow revenues. Here’s how.</p>
+    <div>
+      <!-- This section take his content from _data/comparison.benefits -->
+      {% for benefit in site.data.comparison.benefits %}
+      <article>
+        <img src="{{ site.baseurl }}{{ benefit.img }}" alt="">
+        <h3>{{ benefit.title }}</h3>
+        <p>{{ benefit.text }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  <section class="comparison-testimonials">
+    <div class="testimonials--title">
+      <span class="eyebrow light-eyebrow">Testimonials</span>
+      <h2>Don’t just take it from us, take it from them.</h2>
+    </div>
+    <div class="page-wrapper white small-padding-bottom">
+      <div class="page-inner flex-contents quote-flex align-top">
+        <blockquote class="page-quote">
+          <p>Zoomforth provides an easy way to create polished, professional and fun communications… It is also a very
+            easy tool to train up on, not difficult to use and allows non-creative folks to be creative without
+            challenge.</p>
+          <cite>Development Manager, Big Four Firm</cite>
+        </blockquote>
+        <blockquote class="page-quote">
+          <p>The Zoomforth platform is extremely easy to use, and allows me to design awesome pages for various purposes and audiences. The array of features and options give me control over designing my pages, sharing my content, and conveying my message.</p>
+          <cite>Enterprise Human Resources User</cite>
+        </blockquote>
+        <blockquote class="page-quote">
+          <p>The best thing about this software is you can create your own small website and you can upload a lot of
+            things like videos, images, text and so on. It also gives you unlimited options and you can make the site
+            simple, templated or robust according to your choice and requirements. It's pretty easy to set up and anyone can use this software.</p>
+          <cite>Social Media Executive and Content Editor</cite>
+        </blockquote>
+        <blockquote class="page-quote">
+          <p>I love the low-code, no-code environment of Zoomforth. It's a great way for graphic designers to get started in web design, but also makes it easy for someone with no design experience to create a site.</p>
+          <cite>Customer Education Lead</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+  <section class="use page-wrapper small-padding-bottom">
+    <span class="eyebrow light-eyebrow">Use Cases</span>
+    <div class="page-inner align-center">
+      <h2>Mighty powerful for sales and communication</h2>
+      <p>Browse our most common use cases below.</p>
+      <div class="tabbed-navigation">
+        <ul class="toggle-nav">
+          <li class="active">Custom Sales Proposals & RFPs</li>
+          <li>Client Communication</li>
+          <li>eLearning Experiences</li>
+          <li>Recruiting Campaigns</li>
+        </ul>
+      </div>
+      <div class="use-tabs">
+        <div class="toggle-img visible">
+          <h3>Custom Sales Proposals & RFPs</h3>
+          <p>Stand out from the competition with interactive sales proposals, and win the bid with effortless
+            personalization.</p>
+          <picture>
+            <source srcset="/assets/img/tabs/sales-tab-comparison.webp" type="image/webp">
+            <source srcset="/assets/img/tabs/sales-tab-comparison.png" type="image/jpeg">
+            <img src="/assets/img/tabs/sales-tab-comparison.png"
+              alt="Screenshot of zoomforth showing drag and drop functionality">
+          </picture>
+        </div>
+        <div class="toggle-img">
+          <h3>Client Communication</h3>
+          <p>From leave-behinds to onboarding sites, create tailored content that wins and maintains the trust and
+            respect of your clients.</p>
+          <picture>
+            <source srcset="/assets/img/tabs/communication-tab-comparison.webp" type="image/webp">
+            <source srcset="/assets/img/tabs/communication-tab-comparison.png" type="image/jpeg">
+            <img src="/assets/img/tabs/communication-tab-comparison.png"
+              alt="Screenshot of zoomforth showing built-in branding functionality">
+          </picture>
+        </div>
+        <div class="toggle-img">
+          <h3>eLearning Experiences</h3>
+          <p>Boost engagement and employee retention with interactive learning hubs with all your course content in one,
+            accessible place.</p>
+          <picture>
+            <source srcset="/assets/img/tabs/elearning-tab-comparison.webp" type="image/webp">
+            <source srcset="/assets/img/tabs/elearning-tab-comparison.png" type="image/jpeg">
+            <img src="/assets/img/tabs/elearning-tab-comparison.png"
+              alt="Screenshot of zoomforth showing mobile-friendly microsite functionality">
+          </picture>
+        </div>
+        <div class="toggle-img">
+          <h3>Recruiting Campaigns</h3>
+          <p>Make a big impact with potential talent with a seamless on-brand recruitment process.</p>
+          <picture>
+            <source srcset="/assets/img/tabs/recruiting-tab-comparison.webp" type="image/webp">
+            <source srcset="/assets/img/tabs/recruiting-tab-comparison.png" type="image/jpeg">
+            <img src="/assets/img/tabs/recruiting-tab-comparison.png"
+              alt="Screenshot of zoomforth showing analytics functionality">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="comparison-benefits comparison-members">
+    <h2>Zoomforth members receive unparalleled service</h2>
+    <div>
+      {% for client in site.data.comparison.clients %}
+      <article>
+        <img src="{{ site.baseurl }}{{ client.img }}" alt="">
+        <h3>{{ client.title }}</h3>
+        <p>{{ client.text }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  <div class="page-wrapper comparison-contact">
+
+    <div class="page-inner request-demo-page flex-contents mobile-flex-column">
+
+      <div class="md-fifty-percent comparison-discover" id="main">
+        <span class="eyebrow light-eyebrow">Personalized Demo</span>
+        <h2>Discover why Zoomforth is the #1 {{page.competitor}} alternative</h2>
+        <span>{{page.conclusion-cta}}...</span>
+        <ul>
+          <li>No-code, beginner-friendly design</li>
+          <li>Flexible contract and proposal templates for sales, marketing, and communication</li>
+          <li>Hands-on setup, customer support, and dedicated design services</li>
+        </ul>
+        <p>Ready to learn the full benefits of joining?<br> Book a one-to-one demo today!</p>
+        <blockquote>
+          <p>Zoomforth has impacted revenue by increasing the response rate significantly, clients are more engaged and that leads to a greater rapid response.</p>
+          <cite>Tim Walther, Founder, Grand Dynamics</cite>
+        </blockquote>
+        <p></p>
+      </div>
+
+      <div class="md-fifty-percent form-comparison">
+        <h3 id="form">Request a personalized demo</h3>
+        <form action="https://formspree.io/f/myyllrzj" class="site-form" method="post">
+          <label for="email">Business email</label>
+          <input type="email" id="email" name="email" required>
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" required>
+          <label for="company-name">Company name</label>
+          <input type="text" id="company-name" name="company-name" required>
+          <label for="use-case">Use case</label>
+          <select id="use-case" name="use-case" required>
+            <option value="" disabled selected>Please select</option>
+            <option value="Sales">Sales</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Recruiting">Recruiting</option>
+            <option value="Learning">Learning</option>
+            <option value="Other">Other</option>
+          </select>
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="utm_content" value="">
+          <button class="cta cta--bold" type="submit">Request a Demo now</button>
+      </div>
+    </div>
+
+  </div>
+{% include footer.html %}
+</body>
+<script>
+  $(".toggle-nav li").click(function () {
+    $(this)
+      .addClass("active")
+      .parents(".toggle-nav")
+      .find("li")
+      .not($(this))
+      .removeClass("active");
+    var currentTabIndex = $(this).index();
+    $(".toggle-img:eq(" + currentTabIndex + ")")
+      .addClass("visible")
+      .parents(".use-tabs")
+      .find(".toggle-img")
+      .not($(".toggle-img:eq(" + currentTabIndex + ")"))
+      .removeClass("visible");
+  });
+</script>
+{% include salesoft-tracking.html %}
+</html>
