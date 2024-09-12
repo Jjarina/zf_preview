@@ -1,0 +1,37 @@
+---
+## Blog posts automatically generated, any of that code can be found in 'events.html' layout.
+layout: case-studies
+permalink: /case-studies
+meta_title: Case studies
+meta_description: See how microsites have helped our clients improve their impact, increase engagement, and win more business.
+page_heading: Case studies
+page_intro: See how microsites have helped our clients improve their impact, increase engagement, and win more business.
+news_strip: We're celebrating 40,000 sites built in Zoomforth and counting! Want to get started? <a href="/request-demo">Request a demo</a>.
+---
+<div class="page-wrapper large-padding-top dark-bg case-studies">
+  <!-- Each case is taken from the _data/case-studies -->
+  {% for case in site.data.case-studies %}
+  <!-- Case Study {{case.number}} -->
+  <section class="page-inner content-right flex-contents mobile-flex-column bottom-spacing-xl">
+    <div class="content-media md-sixty-percent">
+    <a href="{{case.link}}" target="_blank">
+      <picture>
+        <!-- This variable must be a webp image format -->
+        <source srcset="{{case.picture-url-1}}" type="image/webp">
+        <!-- This variable must be a png image format -->
+        <source srcset="{{case.picture-url-2}}" type="image/png">
+        <!-- This variable must be a png image format -->
+        <img class="image-shadow" src="{{case.picture-url-2}}" alt="{{case.alt}}" loading="lazy">
+      </picture>
+    </a>
+    </div>
+    <div class="content-wrap md-forty-percent">
+      <!-- In this variable, we use the same name as "alt" image text -->
+      <span class="eyebrow">{{case.alt}}</span>
+      <h2>{{case.h2}}</h2>
+      <p>{{case.p}}</p>
+      <a class="plain-link arrow cta--mt20" href="{{case.link}}" target="_blank">Read More <img src="/assets/svg/arrow_right_blue.svg" alt="" loading="lazy"></a>
+    </div>
+  </section>
+  {% endfor %} 
+</div>

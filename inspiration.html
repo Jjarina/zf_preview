@@ -1,0 +1,128 @@
+---
+## To add new items to the gallery, view /_data/gallery-items.yml
+layout: compress
+permalink: /inspiration
+meta_title: Microsite Examples
+meta_description: Need inspiration for your landing page or microsite? Zoomforth’s gallery is filled with exciting ideas you can easily adapt for your audience’s needs. Start creating today.
+## Content for hero area
+page_heading: Microsite Examples
+page_intro: Explore examples of the digital content experiences you can create with custom microsites from Zoomforth. Search by category for templates designed for sales & marketing, recruiting & onboarding, and learning & events, or browse all templates to get inspired by what Zoomforth microsites can make possible.  
+news_strip: We're celebrating 40,000 sites built in Zoomforth and counting! Want to get started? <a href="/request-demo">Request a demo</a>.
+---
+{% include head.html %}
+
+<body>
+    <a class="skip-to-content-link" href="#main">Skip to content</a>
+    {% include masthead.html %}
+<section class="intro-row" id="main">
+    <div class="page-inner flex-50 flex-contents flex-contents md-flex-direction">
+        <h1>{{ page.page_heading }}</h1>
+        <p>{{ page.page_intro }}</p>
+    </div>
+</section>
+
+<section class="page-inner">
+
+    {% if page.url contains "inspiration" %}
+    <div class="tabbed-navigation">
+        <ul class="toggle-nav">
+            <li class="active" value="visible">Show All</li>
+            <li value="marketing">Marketing</li>
+            <li value="sales">Sales</li>
+            <li value="recruiting">Recruiting &amp; Onboarding</li>
+            <li value="learning">Learning &amp; Events</li>
+        </ul>
+    </div>
+    <ul class="inspiration-items">
+
+        {% for item in site.data.inspiration-items %}
+          <li class="inspiration-item 
+            {% if item.category1 %}{{ item.category1 | downcase }}{% endif %} 
+            {% if item.category2 %}{{ item.category2 | downcase }}{% endif %} 
+            visible">
+            <a href="https://share.zoomforth.com{{ item.url }}" target="_blank">
+              <picture>
+                <source srcset="/assets/img/inspiration/{{ item.image }}.webp" type="image/webp">
+                <source srcset="/assets/img/inspiration/{{ item.image }}.jpg" type="image/jpeg">
+                <img src="/assets/img/inspiration/{{ item.image }}.jpg" alt="Screenshot of microsite template for {{ item.category1 }}">
+              </picture>
+            </a>
+            <div class="inspiration-items-copy">
+              <div>
+                <h2>
+                  {{ item.name }}
+                </h2>
+                {% if item.category1 %}
+                <span>{{ item.category1 }}</span>
+                {% endif %}
+                {% if item.category2 %}
+                <span>{{ item.category2 }}</span>
+                {% endif %}
+              </div>
+              <a class="link-preview" href="https://share.zoomforth.com{{ item.url }}" target="_blank" title="Preview Template">Preview</a>
+              <p>{{item.paragraph}}</p>
+            </div>
+          </li>
+        {% endfor %}
+      
+        <!-- {% for item in site.data.inspiration-items %}
+        <li class="inspiration-item {% if item.category1 == 'Sales' or item.category2 == 'Sales' %}sales{% elsif item.category1 == 'Marketing' or item.category2 == 'Marketing' %}marketing{% elsif item.category1 == 'Learning & Events' or item.category2 == 'Learning & Events' %}learning{% elsif item.category1 == 'Recruiting & Onboarding' or item.category2 == 'Recruiting & Onboarding' %}recruiting{% endif %} visible">
+            <a href="https://share.zoomforth.com{{ item.url }}" target="_blank">
+                <picture>
+                    <source srcset="/assets/img/inspiration/{{ item.image }}.webp" type="image/webp">
+                    <source srcset="/assets/img/inspiration/{{ item.image }}.jpg" type="image/jpeg">
+                    <img src="/assets/img/inspiration/{{ item.image }}.jpg" alt="Screenshot of microsite template for {{ item.category1 }}">
+                </picture>
+            </a>
+            <div>
+              <div>
+                <h2>
+                  {{ item.name }}
+                  {% if item.category1 %}
+                  <span>{{ item.category1 }}</span>
+                  {% endif %}
+                  {% if item.category2 %}
+                  <span>{{ item.category2 }}</span>
+                  {% endif %}
+                </h2>
+                <a class="link-preview" href="https://share.zoomforth.com{{ item.url }}" target="_blank" title="Preview Template">Preview</a>
+              </div>
+              <p>{{item.paragraph}}</p>
+            </div>
+
+        </li>
+        {% endfor %} -->
+
+    </ul>
+    {% else %}
+
+{% endif %}
+</section>
+
+{% include cta-main.html %}
+
+{% include footer.html %}
+</body>
+<script defer>
+$(".toggle-nav li").click(function () {
+  var inputValue = $(this).attr("value");
+  $(this).addClass("active").siblings().removeClass("active");
+
+  if (inputValue === "visible") {
+    $(".inspiration-items li").show();
+    return;
+  }
+
+  $(".inspiration-items li").hide();
+  $(".inspiration-items li").each(function () {
+    var item = $(this);
+    var categories = item.attr("class").split(" ");
+    if (categories.includes(inputValue)) {
+      item.show();
+    }
+  });
+});
+
+</script>
+{% include salesoft-tracking.html %}
+</html>

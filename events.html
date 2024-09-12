@@ -1,0 +1,134 @@
+---
+##Blog posts automatically generated, any of that code can be found in 'events.html' layout.
+layout: compress
+permalink: /events
+meta_title: Events & Workshops
+meta_description: Register here for free microsite design seminars and skills workshops. Hear about new features and learn tips and tricks, to take your microsite designs to the next level.
+page_heading: Events & Workshops
+page_intro: Whether you're new to Zoomforth, want to brush up on the basics or learn advanced design skills, we have an event or workshop to help.
+news_strip: We're celebrating 40,000 sites built in Zoomforth and counting! Want to get started? <a href="/request-demo">Request a demo</a>.
+---
+{% include head.html %}
+
+<body>
+    <a class="skip-to-content-link" href="#main">Skip to content</a>
+
+    {% include masthead.html %}
+
+<section class="page-wrapper">
+  <div class="page-inner">
+    <header class="events_intro">
+      <img src="{{ 'assets/svg/format_shapes.svg' | relative_url }}" alt="Format shapes icon">
+      <div>
+        <h1>Events & Workshops</h1>
+        <p>Sharpen your skills and explore new ways to use Zoomforth. From product education to design tips, we'll help you take your digital content to the next level.</p>
+      </div>
+      <img src="{{ 'assets/svg/style.svg' | relative_url }}" alt="Format shapes icon">
+    </header>
+
+    <section class="page-wrapper">
+      <h2>Design Skills Workshops</h2>
+      <p>Up your microsite game with our complimentary online workshops. We'll demonstrate advanced features, share tips and tricks, and answers all your design related questions.</p>
+      <p>Register your interest below. If you can't attend on the day, we'll send you the recording to watch, on demand.</p>
+    </section>
+    <div class="events_news">
+      <!-- This code take the data from _data/events. Here is the most organized information for upcoming events -->
+      {% for event in site.data.events %}
+      <div class="learn-more-panel key-events">
+        <div>
+          <h3>{{ event.title }}</h3>
+          <p>{{ event.paragraph }}</p>
+          {% if event.link %}
+          <a class="plain-link arrow" href="{{ event.link }}" target="_blank" title="{{ event.title_link }}" rel="nofollow">{{ event.cta }} <img src="/assets/svg/arrow_right_blue.svg" alt="arrow right to next step"/></a>
+          {% endif %}
+        </div>
+        <img src="{{site.baseurl}}assets/svg/{{ event.icon }}" alt="Tool icon"/>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<div class="page-wrapper white">
+
+  <section class="page-inner">
+      <span class="eyebrow">Insights</span>
+      <div class="header-link">
+          <h2>Latest from the blog</h2>
+          <a class="arrow" href="{{ site.baseurl }}blog">Visit the Blog <img src="/assets/svg/arrow_right_blue.svg" alt=""></a>
+      </div>
+      <ul class="blog_content">
+        {% assign first_post = site.posts[0] %}
+          <li>
+            <a href="{{ first_post.url }}" class="tutorial" title="{{ first_post.h1 }}">
+              <div class="tutorial_img">
+                <img src="{{ site.baseurl }}assets/img/blog/{{ first_post.webp }}" alt="{{ first_post.alt }}" loading="lazy">
+              </div>
+              <div class="blog_card">
+
+                <h3>{{ first_post.title | truncate: 52}}</h3>
+
+                <span>Time:
+                  {{ first_post.time_read }}
+                  • Author:
+                  {{ first_post.author }}</span>
+                <hr>
+                <ul>
+                  {% for cat in first_post.categories %}
+                    <li>{{ cat }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </a>
+          </li>
+          {% assign second_post = site.posts[1] %}
+          <li>
+            <a href="{{ second_post.url }}" class="tutorial" title="{{ second_post.h1 }}">
+              <div class="tutorial_img">
+                <img src="{{ site.baseurl }}assets/img/blog/{{ second_post.webp }}" alt="{{ second_post.alt }}" loading="lazy">
+              </div>
+              <div class="blog_card">
+                <h3>{{ second_post.title | truncate: 52}}</h3>
+                <span>Time:
+                  {{ second_post.time_read }}
+                  • Author:
+                  {{ second_post.author }}</span>
+                <hr>
+                <ul>
+                  {% for cat in second_post.categories %}
+                    <li>{{ cat }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </a>
+          </li>
+          {% assign third_post = site.posts[2] %}
+          <li>
+            <a href="{{ third_post.url }}" class="tutorial" title="{{ third_post.h1 }}">
+              <div class="tutorial_img">
+                <img src="{{ site.baseurl }}assets/img/blog/{{ third_post.webp }}" alt="{{ third_post.alt }}" loading="lazy">
+              </div>
+              <div class="blog_card">
+
+                <h3>{{ third_post.title | truncate: 52}}</h3>
+
+                <span>Time:
+                  {{ third_post.time_read }}
+                  • Author:
+                  {{ third_post.author }}</span>
+                <hr>
+                <ul>
+                  {% for cat in third_post.categories %}
+                    <li>{{ cat }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </a>
+          </li>
+      </ul>
+  </section>
+  </div>
+  {% include cta-main.html %}
+  {% include footer.html %}
+  </body>
+  {% include salesoft-tracking.html %}
+  </html>

@@ -1,0 +1,47 @@
+---
+layout: compress
+page_heading: Have a question about Zoomforth? Send us a message.
+---
+{% include head.html %}
+
+<body>
+    <a class="skip-to-content-link" href="#main">Skip to content</a>
+    {% include masthead.html %}
+
+<div class="page-wrapper" id="main">
+  <div class="page-inner contact-page">
+    <!-- {% if page.url == "/contact" %} -->
+
+    <h1 class="align-center mb-0">{{ page.page_heading }}</h1>
+
+    <form
+      action="https://formspree.io/f/meqvvdaz"
+      class="site-form"
+      method="post"
+    >
+      <label for="email">Business email</label>
+      <input type="email" id="email" name="email" required />
+      <label for="name">Your name</label>
+      <input type="text" id="name" name="name" required />
+      <label for="message">Message</label>
+      <textarea id="message" name="message"></textarea>
+      <button class="cta cta--bold" type="submit">Send</button>
+    </form>
+    <p>Looking for Zoomforth support? <a href="https://support.zoomforth.com/en/?_ga=2.254859656.1875784895.1685593288-1070179526.1685593288" target="_blank" title="Visit the help center">Visit the help center</a></p>
+
+    <!-- {% else %}
+
+    <div class="site-form">
+      {{ content }}
+      <a class="cta cta--bold" href="{{ site.baseurl }}">Back to homepage</a>
+    </div>
+
+    {% endif %} -->
+  </div>
+</div>
+<!--/page-wrapper-->
+{% include cta-main.html %}
+{% include footer.html %}
+</body>
+{% include salesoft-tracking.html %}
+</html>

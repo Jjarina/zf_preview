@@ -1,0 +1,107 @@
+---
+layout: compress
+permalink: /academy
+meta_title: Zoomforth Academy
+meta_description: We've put together a series of short videos and written resources to help you create fabulous microsites.
+---
+
+{% include head.html%}
+
+<body>
+  <header class="academy-header">
+    <nav>
+      <a href="{{ 'academy' | relative_url }}">
+        <img src="{{ 'assets/svg/zf_academy.svg' | relative_url}}" alt="Logo Zoomforth"
+          title="Home Zoomforth Academy" width="230" height="42">
+      </a>
+      <a href="{{site.baseurl}}" title="zoomforth.com">Go to Zoomforth.com</a>
+    </nav>
+    <hr>
+    <section>
+      <h1>Welcome to the Zoomforth Academy </h1>
+      <p>We've put together a series of short videos and written resources to help you create fabulous microsites.</p>
+    </section>
+  </header>
+  <section class="academy-video">
+    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/936233954?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="ZF General"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+  </section>
+
+  <main>
+    <div class="academy-categorys">
+      <ul class="toggle-nav">
+        <li class="active" value="visible">All courses</li>
+        <li value="platform">Getting to know the platform</li>
+        <li value="building">Start building</li>
+        <li value="publishing">Publishing &#38; site security</li>
+        <li value="account">Account &#38; site management</li>
+        <li value="analytics">Data analytics</li>
+        <li value="tips">Advanced tips &#38; tricks</li>
+        <hr>
+      </ul>
+    </div>
+    <!-- This part of the code loops the categories and courses from the _data/academy file -->
+    <div class="courses">
+      {% for subject in site.data.academy %}
+      {% assign cat = subject[0] %}
+      <h2 class="tutorials {% if cat == "Getting to know the platform" %}platform{% elsif cat == "Start building" %}building{% elsif cat == "Publishing &#38; site security" %}publishing{% elsif cat == "Account &#38; site management" %}account{% elsif cat == "Data analytics" %}analytics{% elsif cat == "Advanced tips &#38; tricks" %}tips{% endif %} visible">{{cat}}</h2>
+        {% if cat == "Advanced tips &#38; tricks" %}
+        <p class="tutorials {% if cat == "Getting to know the platform" %}platform{% elsif cat == "Start building" %}building{% elsif cat == "Publishing &#38; site security" %}publishing{% elsif cat == "Account &#38; site management" %}account{% elsif cat == "Data analytics" %}analytics{% elsif cat == "Advanced tips &#38; tricks" %}tips{% endif %} visible">Watch snippets from our live Design Skills Workshops, on-demand.<br> Learn advanced tips and tricks to add the wow-factor to your microsites.</p>
+        {% endif %}
+      <div class="tutorials {% if cat == "Getting to know the platform" %}platform{% elsif cat == "Start building" %}building{% elsif cat == "Publishing &#38; site security" %}publishing{% elsif cat == "Account &#38; site management" %}account{% elsif cat == "Data analytics" %}analytics{% elsif cat == "Advanced tips &#38; tricks" %}tips{% endif %} visible">
+        {% for class in site.data.academy[cat] %}
+        <a href="{{site.baseurl}}academy/{{class.url}}"
+          class="tutorial {% if class.category == "Getting to know the platform" %}platform{% elsif class.category == "Start building" %}building{% elsif class.category == "Publishing &#38; site security" %}publishing{% elsif class.category == "Account &#38; site management" %}account{% elsif class.category == "Data analytics" %}analytics{% elsif class.category == "Advanced tips &#38; tricks" %}tips{% endif %} visible">
+          <div class="tutorial_img">
+            <img src="{{site.baseurl}}assets/svg/{{ class.img }}"
+              alt="Screenshot of microsite template for {{ class.title }}">
+          </div>
+          <div class="tutorial_info">
+            <h3>{{ class.title | truncate: 67}}</h3>
+            <div>
+              <span>Video: {{ class.video }}</span><span>•</span><span>Resources: {{ class.resources }}</span>
+            </div>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+
+  </main>
+  <section class="academy-help">
+    <h2>Need more help?</h2>
+    <p>If you don't see what you are looking for, here are some more support services to help.</p>
+    <ul>
+      <li>
+        <img src="{{ 'assets/svg/icon-support.svg' | relative_url }}" alt="">
+        <h3>Help Center</h3>
+        <p>This is a library of written and visual resources, covering a wide range of topics.</p>
+        <a href="https://support.zoomforth.com/en/" title="Events section">Visit our help center</a>
+      </li>
+      <li>
+        <img src="{{ 'assets/svg/icon-support-team.svg' | relative_url }}" alt="">
+        <h3>Support Team</h3>
+        <p>Our Support Team is available from 12am-2pm Pacific / 9am-11pm CET, Monday through Friday. Contact them via the intercom button on the bottom right of the screen.</p>
+      </li>
+      <li>
+        <img src="{{ 'assets/svg/icon-events.svg' | relative_url }}" alt="">
+        <h3>Events</h3>
+        <p>We regularly run learning events for all levels of ability - from beginner to advanced.</p>
+        <a href="{{site.baseurl}}events" title="Events section">Visit our Events page</a>
+      </li>
+    </ul>
+  </section>
+
+  {% include footer.html %}
+</body>
+  {% include salesoft-tracking.html %}
+  <script async>
+    $(".toggle-nav li").click(function () {
+      var inputValue = $(this).attr("value");
+      var targetBox = $("." + inputValue);
+      $(this).addClass("active").siblings().removeClass("active");
+      $(".tutorial, .tutorials").not(targetBox).hide();
+      $(targetBox).show();
+    });
+  </script>
+</html>

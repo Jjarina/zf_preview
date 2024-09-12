@@ -1,0 +1,46 @@
+---
+layout: platform
+permalink: /platform-integrations
+title: Zoomforth platform integrations
+h1: Let’s get connected with Zoomforth platform integrations
+description: Zoomforth’s platform integrations make it easy for you to create a unified and completely synchronized communication ecosystem. View our 3rd party integrations.
+intro: Make Zoomforth part of your communication ecosystem, with a range of third party integrations.<br><br>Connect your CRM, CMS and more, to streamline your workflow and provide a single central view of your microsite audiences.
+icons:
+  - img: icon-media.svg
+    alt: Icon media Zoomforth
+    text: Multimedia compatible
+  - img: icon-diple.svg
+    alt: Icon diple Zoomforth
+    text: Custom integrations
+  - img: icon-control.svg
+    alt: Icon control Zoomforth
+    text: Zapier integrations
+  - img: icon-native.svg
+    alt: Icon native Zoomforth
+    text: Native integrations
+  - img: icon-bubles.svg
+    alt: Icon bubles Zoomforth
+    text: Bespoke integrations
+eyebrow: Integrations
+#Comment for testimial section
+comment: Zoomforth is an intuitive platform, with excellent support. It's like other What You See Is What You Get [WYSIWYG] platforms, but on steroids.
+source: Executive Sponsor · Management Consulting
+---
+<section class="platform-integrations">
+  <span class="eyebrow">{{ page.eyebrow }}</span>
+  <h2>3rd party integrations at a glance</h2>
+  <p>Here are just some of the 3rd party integrations we can offer you. If you don’t see what you’re looking for, please just ask us for specific platform integrations.</p>
+  <div>
+    {% for integration in site.data.platform-integrations %}
+    <article>
+      <img src="{{ site.baseurl }}assets/img/{{ integration.img }}" alt="{{ integration.alt }} logo" width="360" height="200" loading="lazy">
+      <h4>{{ integration.title }}</h4>
+      <div>
+        <p>{{ integration.p }}</p>
+        {% if integration.span %}
+          <span>{{ integration.span }}</span>
+        {% endif %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
